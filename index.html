@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/scripts.js" async></script>
+    <link rel="icon" href="css/GYM.svg" type="image/png">
+    <title>Gym Club Academy</title>
+</head>
+<body>
+
+<header>
+    <div class="acadLogo"><a href="index.html"> <img class="logo" src="css/acad.svg"></a></div>
+
+    <ul class="navBar">
+        <li><button id="sobre">Sobre a Academia</button></li>
+        <li><button id="devs">Desenvolvedores</button></li>
+        <li><a href="http://www.charqueadas.ifsul.edu.br/portal/"> <button id="ifsul">Instituto Federal</button></a></li>
+    </ul>
+
+</header>
+
+<div class="container">
+    <div class="r">
+    <form>
+        <h2>Registre-se</h2>
+
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email">
+        </div>
+
+        <div class="form-group">
+            <label for="options">Planos GYM CLUB:</label>
+            <select id="options" name="options">
+                <option value="opcao1">Diário R$20 </option>
+                <option value="opcao2">Mensal R$80</option>
+                <option value="opcao3">Trimestral R$200</option>
+                <option value="opcao4">Anual R$900</option>
+            </select>
+        </div>
+
+        <button id="register" type="submit">Registrar</button>
+    </form>
+    </div>
+    <div class="r">
+        <form>
+            <h2>Login</h2>
+
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name-log" name="name" placeholder="Digite seu nome">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email-log" name="email" placeholder="Digite seu email">
+            </div>
+            <button id="login" type="submit">Login</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
