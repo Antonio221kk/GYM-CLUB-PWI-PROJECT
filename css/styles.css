@@ -220,7 +220,11 @@ button[type="submit"]:hover {
 
 
     }
+.logo{
+        width: 50%;
 
+
+    }
 
 
 }
@@ -240,8 +244,5 @@ button[type="submit"]:hover {
 
 
     }
-    .logo{
-        width: 50%;
-
-    }
+    
 }
