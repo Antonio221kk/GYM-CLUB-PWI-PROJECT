@@ -181,4 +181,63 @@ button[type="submit"]:hover {
     }
 
 }
+    @media (max-width: 880px) {
+        .navBar {
+            display: none;
+            margin-top: 10%;
+        }
 
+        .menu-icon {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 20px;
+            margin-right: 10px;
+            color: blue;
+        }
+
+        #toggle-menu {
+            display: none;
+        }
+
+        #toggle-menu:checked ~ .buttons-responsive .navBar {
+            display: block;
+        }
+    
+}
+@media (max-width: 640px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 35%;
+
+    }
+
+    .r {
+        margin-bottom: 20px;
+    }
+    form{
+        height: 110%;
+
+
+    }
+
+
+
+}
+@media (max-width: 340px){
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 35%;
+    }
+
+    .r {
+        margin-bottom: 20px;
+    }
+    form{
+        height: 110%;
+
+
+    }
+}
