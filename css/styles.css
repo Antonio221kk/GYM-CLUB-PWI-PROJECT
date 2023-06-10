@@ -202,7 +202,7 @@ button[type="submit"]:hover {
         #toggle-menu:checked ~ .buttons-responsive .navBar {
             display: block;
         }
-    
+
 }
 @media (max-width: 640px){
     .container {
@@ -237,6 +237,11 @@ button[type="submit"]:hover {
     }
     form{
         height: 110%;
+
+
+    }
+    .logo{
+        width: 50%;
 
 
     }
