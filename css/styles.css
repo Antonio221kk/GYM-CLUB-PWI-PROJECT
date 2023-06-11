@@ -13,66 +13,69 @@ body{
     background-repeat: no-repeat ;
     background-size:cover;
     background-attachment: fixed;
-    transition: all .50s ease;
 
 
 }
-header{
-    position: fixed;
-    background-color: white;
+header {
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
-    top: 0;
-    right: 0;
-    height: 90px;
+
+}
+
+.nav-bar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 28px;
-    transition: all .50s ease;
-
+    padding: 1.5rem 6rem;
 }
-.logo{
+
+.logo {
     display: flex;
-    width: 50vh;
     align-items: center;
-    height: 280px;
-
-
 }
-.navBar{
+
+.logo img {
+    max-width: 230px;
+    max-height: 230px;
+}
+
+.nav-list {
     display: flex;
+    align-items: center;
 }
-.navBar button{
 
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 500;
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
     padding: 10px;
-    margin: 0 30px;
+    border-style: double;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #237aff;
+    border-color:#237aff ;
+
+}
+.nav-item:hover {
+    margin: 0 15px;
+    padding: 10px;
+    border-style: double;
+    border-radius: 10px;
+    background-color: transparent;
+    color: gray;
+    border-color:gray;
     transition: all .50s ease;
-    background-color: blue;
-    border-radius: 30px;
 }
-.navBar .active{
-    color: white;
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
 
 }
-.navBar button:hover{
-    color: white;
-    background-color: grey;
-
-}
-#inscreva-se-btn{
-    border: 2px solid blue;
-    padding: 10px;
-    border-radius: 15px;
-}
-
-#inscreva-se-btn:hover{
-    background-color: blue;
-    color: white;
-}
-
 h1{
     font-weight: 160;
 }
@@ -135,20 +138,22 @@ button[type="submit"] {
     float: right;
 }
 
+
 button[type="submit"]:hover {
     background-color: grey;
     transition: all .50s ease;
 }
 
 @media (max-width: 1280px){
-    header{
+   /* header{
         padding: 14px 2%;
         transition: .2s;
     }
     .navBar button{
         padding: 5px 0;
         margin: 0 20px;
-    }
+        */
+
     form{
         height: 63%;
 
@@ -157,7 +162,7 @@ button[type="submit"]:hover {
 }
 @media (max-width: 1080px){
 
-    .navBar{
+    /*.navBar{
         position: absolute;
         top: 20%;
         right: 2%;
@@ -173,42 +178,32 @@ button[type="submit"]:hover {
         border-radius:40px;
         padding: 5px ;
         margin:  20px;
+    */
 
-    }
     form{
         height: 60%;
 
     }
-
 }
+
     @media (max-width: 880px) {
         .navBar {
-            display: none;
+
             margin-top: 10%;
         }
+        .logo img{
+            max-width: 150px;
+            max-height: 150px;
 
-        .menu-icon {
-            display: inline-block;
-            cursor: pointer;
-            font-size: 20px;
-            margin-right: 10px;
-            color: blue;
         }
 
-        #toggle-menu {
-            display: none;
-        }
-
-        #toggle-menu:checked ~ .buttons-responsive .navBar {
-            display: block;
-        }
 
 }
 @media (max-width: 640px){
     .container {
         display: flex;
         flex-direction: column;
-        margin-top: 35%;
+        margin-top: 10%;
 
     }
 
@@ -220,15 +215,30 @@ button[type="submit"]:hover {
 
 
     }
-.logo{
+    .logo{
         width: 50%;
 
 
     }
+    .mobile-menu ul {
+        display: flex;
+
+        align-items: center;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .open {
+        display: block;
+    }
 
 
 }
-@media (max-width: 340px){
+@media (max-width: 370px){
 
     .container {
         display: flex;
@@ -244,5 +254,54 @@ button[type="submit"]:hover {
 
 
     }
-    
+    .mobile-menu ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .logo img{
+        max-width: 130px;
+        max-height: 130px;
+    }
+
+}
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .open {
+        display: block;
+    }
 }
