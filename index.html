@@ -11,44 +11,61 @@
 </head>
 <body>
 
-<header>
-    <div class="acadLogo"><a href="index.html"> <img class="logo" src="css/acad.svg"></a></div>
 
-    <ul class="navBar">
-        <li><button id="sobre">Sobre a Academia</button></li>
-        <li><button id="devs">Desenvolvedores</button></li>
-        <li><a href="http://www.charqueadas.ifsul.edu.br/portal/"> <button id="ifsul">Instituto Federal</button></a></li>
-    </ul>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="css/logologo.png">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <a href="#" class="nav-link"><button class="nav-item">Sobre a Academia</button></a>
+                    <a href="#" class="nav-link"><button class="nav-item">Desenvolvedores</button></a>
+                    <a href="http://www.charqueadas.ifsul.edu.br/" class="nav-link"><button class="nav-item"> Instituto Federal</button></a>
+                </ul>
+            </div>
 
-</header>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="css/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <a href="#" class="nav-link"><button class="nav-item">Sobre a Academia</button></a>
+                <a href="#" class="nav-link"><button class="nav-item">Desenvolvedores</button></a>
+                <a href="http://www.charqueadas.ifsul.edu.br/" class="nav-link"><button class="nav-item">Instituto Federal</button></a>
+            </ul>
+
+        </div>
+    </header>
 
 <div class="container">
     <div class="r">
-    <form>
-        <h2>Registre-se</h2>
+        <form>
+            <h2>Registre-se</h2>
 
-        <div class="form-group">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" placeholder="Digite seu nome">
-        </div>
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome">
+            </div>
 
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu email">
-        </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email">
+            </div>
 
-        <div class="form-group">
-            <label for="options">Planos GYM CLUB:</label>
-            <select id="options" name="options">
-                <option value="opcao1">Diário R$20 </option>
-                <option value="opcao2">Mensal R$80</option>
-                <option value="opcao3">Trimestral R$200</option>
-                <option value="opcao4">Anual R$900</option>
-            </select>
-        </div>
+            <div class="form-group">
+                <label for="options">Planos GYM CLUB:</label>
+                <select id="options" name="options">
+                    <option value="opcao1">Diário R$20 </option>
+                    <option value="opcao2">Mensal R$80</option>
+                    <option value="opcao3">Trimestral R$200</option>
+                    <option value="opcao4">Anual R$900</option>
+                </select>
+            </div>
 
-        <button id="register" type="submit">Registrar</button>
-    </form>
+            <button id="register" type="submit">Registrar</button>
+        </form>
     </div>
     <div class="r">
         <form>
