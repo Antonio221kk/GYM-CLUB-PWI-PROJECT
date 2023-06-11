@@ -1,12 +1,10 @@
-const menuIcon = document.querySelector('.menu-icon');
-const navBar = document.querySelector('.navBar');
-const toggleMenu = document.getElementById('toggle-menu');
-
-// Adicionar um manipulador de eventos ao ícone do menu
-menuIcon.addEventListener('click', function() {
-    // Alternar a exibição da barra de navegação
-    navBar.style.display = navBar.style.display === 'none' ? 'block' : 'none';
-
-    // Alternar o estado do checkbox
-    toggleMenu.checked = !toggleMenu.checked;
-});
+function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src = "css/menu_white_36dp.svg";
+    } else {
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src = "css/close_white_36dp.svg";
+    }
+}
