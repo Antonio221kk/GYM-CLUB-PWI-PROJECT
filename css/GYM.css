@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+
+
+}
+body{
+    background-image: url("../css/fundoGYM.png");
+    background-repeat: no-repeat ;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: 'Libre Franklin', sans-serif;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.texto{
+    color: white;
+    text-align: justify;
+    font-size: 20px;
+
+}
+
+span p{
+align-items: center;
+}
+img{
+    max-width: 400px;
+    max-height: 400px;
+
+}
+button{
+    margin-top: 100px;
+    background-image: linear-gradient(to right, #070579, #070707);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    font-size: 13px;
+}
