@@ -20,7 +20,6 @@ header {
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
 
-
 }
 
 .nav-bar {
@@ -70,13 +69,7 @@ header {
     border-color:gray;
     transition: all .50s ease;
 }
-.nav-link {
-    text-decoration: none;
-    font-size: 1.15rem;
-    color: #fff;
-    font-weight: 400;
 
-}
 h1{
     font-weight: 160;
 }
