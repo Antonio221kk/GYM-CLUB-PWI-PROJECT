@@ -12,7 +12,7 @@ function menuShow() {
 //Aqui abaixo vou utilizar essas funções para redirecionar o usuário as outras páginas...
 // url recebe sites e link do siteIFsul. window.location.href redireciona para as paginas e site usando const URL...
 function btnAcad(){
-const url = "sobreAcad.html"
+const url = "sobreAcad.html";
     window.location.href = url;
 }
 function btnDevs(){

@@ -50,4 +50,5 @@ button{
     cursor: pointer;
     height: 50px;
     font-size: 13px;
+    font-weight: bold;
 }
