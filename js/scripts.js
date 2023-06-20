@@ -19,7 +19,4 @@ function btnDevs(){
 const url = "desenvolvedores.html";
 window.location.href = url;
 }
-function btnIfsul(){
-const url = "http://www.ifsul.edu.br/";
-window.location.href = url;
-}
+
