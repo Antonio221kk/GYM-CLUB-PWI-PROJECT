@@ -90,7 +90,7 @@ formLogin.addEventListener("submit", (event) => {
     if (users && users.length > 0) {
       const foundUser = users.find(user => user.email === email && user.password === password);
       if (foundUser) {
-        const url = "desenvolvedores.html";
+        const url = "homePage.html";
         window.location.href = url;
 
       } else {
