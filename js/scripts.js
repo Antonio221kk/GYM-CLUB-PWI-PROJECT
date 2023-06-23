@@ -19,20 +19,10 @@ function btnDevs(){
 const url = "desenvolvedores.html";
 window.location.href = url;
 }
-/*let logs = [
-{
-name: "antonio",
-email: "antonio@gmail.com",
-password: "12345",
-plan: "anual"
-
-},
 
 
-];*/
-// Selecionando os elementos dos formulários para fazer o registro/login;
+// Selecionando os elementos dos formulários para fazer o registro;
 let formRegister = document.querySelector("#form-register");
-let formLogin = document.querySelector("#form-logins");
 let nameRegi = document.querySelector("#name");
 let emailRegi = document.querySelector("#email");
 let passRegi = document.querySelector("#senha");
@@ -40,32 +30,71 @@ let plans = document.querySelector("#options")
 
 let users = [];
 
-const user = {
-    name: "",
-    email: "" ,
-    password: "",
-    plan: ""
+// Formulário de Registro verificando se o nome, email, senha e plano já foram usados, caso não as informações serão adicionadas com LocalStorage
+formRegister.addEventListener("submit",(event)=>{
+  event.preventDefault();
 
+  const nameInput = document.querySelector("#name");
+  const emailInput = document.querySelector("#email");
+  const passwordInput = document.querySelector("#senha");
+  const planInput = document.querySelector("#options");
 
-};
-users.push(user);
-//Formulário de Registro verificando se o nome, email, senha e plano já foram usados, caso não as informações serão adicionadas com LocalStorage
-formRegister.addEventListener("submit",(element)=>{
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+  const plan = planInput.value;
 
-    element.preventDefault();
-   users.forEach((e)=>{
-    if(nameRegi.value === e.name && emailRegi.value === e.email && passRegi.value === e.password && plans.value === e.plan){
-        alert("Usuário já cadastrado!\n Por favor, dirigir-se para o form de Login\n Equipe GYM CLUB");
-        
-    }else{
-        
-        user.name = document.querySelector("#name").value;
-        user.email = document.querySelector("#email").value;
-        user.password = document.querySelector("#senha").value;
-        user.plan = document.querySelector("#options").value;
-        localStorage.setItem("user",JSON.stringify(user));
-        console.log(user);
-       
-    }
-   });
+  // Validar campos do formulário
+  if (name === '' || email === '' || password === '' || plan === '') {
+    document.querySelector("#spanRegi").textContent = "Preencha todos os campos";
+    return;
+  }
+
+  // Verificar se o usuário já está cadastrado
+  const existingUser = users.find(user => user.email === email);
+  if (existingUser) {
+    document.querySelector("#spanRegi").textContent = "Já existe um usuário cadastrado neste email"
+    return;
+  }
+
+  const user = {
+    name: name,
+    email: email,
+    password: password,
+    plan: plan
+  };
+
+  if (localStorage.getItem("users")) {
+    users = JSON.parse(localStorage.getItem("users"));
+  }
+
+  users.push(user);
+
+  localStorage.setItem("users", JSON.stringify(users));
+
+  console.log(localStorage.getItem("users"));
 });
+
+// Selecionando os elementos do formulário de login
+let formLogin = document.querySelector("#form-logins");
+let passLog = document.querySelector("#senha-log");
+let emailLog = document.querySelector("#email-log");
+
+formLogin.addEventListener("submit", (event) => {
+    event.preventDefault();
+  
+    const users = JSON.parse(localStorage.getItem("users"));
+    const email = emailLog.value.trim();
+    const password = passLog.value;
+  
+    if (users && users.length > 0) {
+      const foundUser = users.find(user => user.email === email && user.password === password);
+      if (foundUser) {
+        const url = "desenvolvedores.html";
+        window.location.href = url;
+
+      } else {
+        document.querySelector("#spanMensagem").textContent = "Usuário não encontrado ou informações incorretas.";
+      }
+    }
+  });
