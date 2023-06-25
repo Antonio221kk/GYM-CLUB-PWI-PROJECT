@@ -93,7 +93,8 @@ formLogin.addEventListener("submit", (event) => {
         const url = "homePage.html";
         window.location.href = url;
 
-      } else {
+      }
+       else {
         document.querySelector("#spanMensagem").textContent = "Usuário não encontrado ou informações incorretas.";
       }
     }
