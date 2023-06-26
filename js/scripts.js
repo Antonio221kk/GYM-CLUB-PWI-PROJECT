@@ -66,6 +66,7 @@ formRegister.addEventListener("submit",(event)=>{
 
   if (localStorage.getItem("users")) {
     users = JSON.parse(localStorage.getItem("users"));
+    alert("Usuário cadastrado com sucesso! \n Equipe GYM CLUB")
   }
 
   users.push(user);
