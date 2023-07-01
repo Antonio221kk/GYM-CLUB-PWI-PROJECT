@@ -3,10 +3,10 @@ function menuShow() {
     let menuMobile = document.querySelector('.mobile-menu');
     if (menuMobile.classList.contains('open')) {
         menuMobile.classList.remove('open');
-        document.querySelector('.icon').src = "css/menu_white_36dp.svg";
+        document.querySelector('.icon').src = "css/imagens/menu_white_36dp.svg";
     } else {
         menuMobile.classList.add('open');
-        document.querySelector('.icon').src = "css/close_white_36dp.svg";
+        document.querySelector('.icon').src = "css/imagens/close_white_36dp.svg";
     }
 }
 //Aqui abaixo vou utilizar essas funções para redirecionar o usuário as outras páginas...

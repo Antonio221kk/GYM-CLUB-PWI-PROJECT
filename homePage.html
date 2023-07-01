@@ -12,7 +12,7 @@
    <body>
     <header>
       <div class="logo">
-          <img class="logo-img" src="css/logoIndex.png" alt="Logo">
+          <img class="logo-img" src="css/imagens/logoIndex.png" alt="Logo">
       </div>
       <div class="frase">
           <h1 class="frase-h1">Qual sua meta?</h1>
@@ -25,7 +25,7 @@
   <section class="org">
       <h2 class="h2-geral">Organização</h2>
         <div class="org-box">
-          <img class="img-sec" src="css/ctorg.jpg">
+          <img class="img-sec" src="css/imagens/ctorg.jpg">
           <p class="parag-box">Em nossa academia, a organização é uma das principais exigencias, prezamos pelo melhor serviço, com muita qualidade, conforto e segurança para o cliente, justamente por isso, separamos as maquinas por seus respectivos grupos musculares.</p>
 
         </div>
@@ -34,36 +34,83 @@
       
   </section>
 
+
   <section class="maquinas">
       <h2 class="h2-geral">Máquinas</h2>
       <div class="maquinas-box" > 
-      <div class="box">
-        <img class="img-box" src="css/maqPeito.png">
-       <h1>Peito</h1>
+      <div class="box" id="peito">
+        <h1>Peito</h1>
+        <img class="img-box" src="css/imagens/maqPeito.png">
+        <button id="showPeito" class="btnShowers">Sobre</button>
     </div>
 
-    <div class="box">
-      <img class="img-box" src="css/maqPerna.png">
+    <div class="box" id="pernas">
       <h1>Pernas</h1>
+      <img class="img-box" src="css/imagens/maqPerna.png">
+      <button id="showPernas" class="btnShowers">Sobre</button>
     </div>
-
-    <div class="box">
-      <img class="img-box" src="css/maqOmbro.png">
+    <div class="box" id="ombros">
       <h1>Ombros</h1>
+      <img class="img-box" src="css/imagens/maqOmbro.png">
+      <button id="showOmbros" class="btnShowers">Sobre</button>
     </div>
 
-    <div class="box">
-      <img class="img-box" src="css/maqCostas.png">
+    <div class="box" id="costas">
       <h1>Costas</h1>
+      <img class="img-box" src="css/imagens/maqCostas.png">
+      <button id="showCostas" class="btnShowers">Sobre</button>
     </div>
 
-    <div class="box">
-      <img class="img-box" src="css/maqCardio.png">
+    <div class="box" id="cardio">
       <h1>Cárdio</h1>
+      <img class="img-box" src="css/imagens/maqCardio.png">
+      <button id="showCardio" class="btnShowers">Sobre</button>
     </div>
   </div>
   </section>
 
+  <dialog id="dialogPeito" >
+      <h1>Exercícios de Peito</h1>
+      <h4></h4>
+      <p>Quantidade de Máquinas: 10</p>
+    <button id="closePeito" class="closeMachines">Fechar</button>
+  </dialog>
+  
+  <dialog id="dialogPernas" >
+    <h1>Exercícios de Pernas</h1>
+    <h4></h4>
+    <p>Quantidade de Máquinas: 12</p>
+    
+    <button id="closePernas" class="closeMachines">Fechar</button>
+  </dialog>
+  
+  <dialog id="dialogOmbros" >
+    <h1>Exercícios de Ombros</h1>
+      <h4></h4>
+      <p>Quantidade de Máquinas: 8</p>
+    
+    <button id="closeOmbros" class="closeMachines">Fechar</button>
+  </dialog>
+  
+  <dialog id="dialogCostas" >
+    <h1>Exercício de Costas</h1>
+    <h4></h4>
+    <p>Quantidade de Máquinas: 10</p>
+    
+    <button id="closeCostas" class="closeMachines">Fechar</button>
+  </dialog>
+  
+  <dialog id="dialogCardio">
+    <h1>Fazer Cardio é Necessário?</h1>
+    <h4></h4>
+    <p>Quantidade de Esteiras: 05
+      <br>
+      Quantidade de Bicicletas: 05
+    </p>
+    
+    <button id="closeCardio" class="closeMachines">Fechar</button>
+  </dialog>
+  
   <div class="repart"></div>
 
   <section class="suplementos">
@@ -73,20 +120,20 @@
     <div class="div-container">
      <!--Max Titanium-->
       <div class="div-item">
-          <img class="marca-box" src="css/maxLogo.png">
-          <img class="suple-box" src="css/wheyMax.png">
-          <img class="suple-box" src="css/creaMax.png">
-          <img class="suple-box" src="css/preMax.png">
+          <img class="marca-box" src="css/imagens/maxLogo.png">
+          <img class="suple-box" src="css/imagens/wheyMax.png">
+          <img class="suple-box" src="css/imagens/creaMax.png">
+          <img class="suple-box" src="css/imagens/preMax.png">
       </div>
     
       <!--Black Skull-->
       <div class="div-item">
         <div class="div-item">
           
-          <img class="marca-box" src="css/blackLogo.png">
-          <img class="suple-box" src="css/wheyBlack.png">
-          <img class="suple-box" src="css/CreaBlack.png">
-          <img class="suple-box" src="css/preBlack.png">
+          <img class="marca-box" src="css/imagens/blackLogo.png">
+          <img class="suple-box" src="css/imagens/wheyBlack.png">
+          <img class="suple-box" src="css/imagens/CreaBlack.png">
+          <img class="suple-box" src="css/imagens/preBlack.png">
       </div>
       
       </div>
@@ -95,10 +142,10 @@
       <div class="div-item">
         
         <div class="div-item">
-          <img class="marca-box" src="css/drLogo.png">
-          <img class="suple-box" src="css/pastaDr.png">
-          <img class="suple-box" src="css/pastaPoDoc.png">
-          <img class="suple-box" src="css/pastaBrigDoc.png">
+          <img class="marca-box" src="css/imagens/drLogo.png">
+          <img class="suple-box" src="css/imagens/pastaDr.png">
+          <img class="suple-box" src="css/imagens/pastaPoDoc.png">
+          <img class="suple-box" src="css/imagens/pastaBrigDoc.png">
       </div>
       
       </div>
