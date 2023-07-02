@@ -60,7 +60,7 @@ function toggleCarrinho() {
 document.addEventListener('DOMContentLoaded',() =>{
   const btnCarrinho = document.querySelector('.btnCarrinho');
   btnCarrinho.addEventListener('click', toggleCarrinho);
-});
+
 let contentSuples = document.querySelectorAll('.content-suple');
 let carrinhoConteudo = document.querySelector('.carrinho-conteudo');
 let total = 0;
@@ -120,4 +120,5 @@ finalizarButton.addEventListener('click', function() {
   carrinhoConteudo.innerHTML = "";
   total = 0; 
   atualizarTotal();
+});
 });
