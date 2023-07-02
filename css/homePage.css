@@ -13,6 +13,15 @@ body {
     color: white;
     padding-top: 100px;
 }
+::-webkit-scrollbar{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 10px;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    
+}
 
 header {
     position: fixed;
