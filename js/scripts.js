@@ -91,8 +91,9 @@ formLogin.addEventListener("submit", (event) => {
     if (users && users.length > 0) {
       const foundUser = users.find(user => user.email === email && user.password === password);
       if (foundUser) {
-        const url = "homePage.html";
-        window.location.href = url;
+        const url = "homePage.html?name=" + encodeURIComponent(foundUser.name);
+      window.location.href = url;
+
 
       }
        else {

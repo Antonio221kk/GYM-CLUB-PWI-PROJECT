@@ -1,3 +1,17 @@
+function getQueryParam(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+// Obtém o nome do usuário da query string
+const userName = getQueryParam("name");
+
+// Exibe o nome do usuário na página
+const saudacao = document.querySelector("#saudacao");
+saudacao.innerHTML = "<p style='color:white'>Boas vindas, " + decodeURIComponent(userName) + "! </p>";
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const btnPeito = document.querySelector("#showPeito");
     const btnPernas = document.querySelector("#showPernas");
@@ -111,14 +125,47 @@ contentSuples.forEach(function(contentSuple) {
 });
 
 // Botão de Finalizar Compra
-var finalizarButton = document.createElement('button');
-finalizarButton.classList.add('finalizarCompra')
-finalizarButton.innerText = 'Finalizar Compra';
+
+const finalizarButton = document.createElement('button');
+finalizarButton.classList.add('finalizarCompra');
+finalizarButton.innerText = 'Comprar agora';
+let contador = 0;
+
+
+
 finalizarButton.addEventListener('click', function() {
-  
   alert("Compra finalizada com sucesso!");
+  
   carrinhoConteudo.innerHTML = "";
   total = 0; 
+  contador = 1;
   atualizarTotal();
+  
+  if (contador !== 0) {
+    const Avaible = document.createElement("dialog");
+    Avaible.innerHTML = `
+    <h1 style="color: black; text-align:center;">Equipe GYM CLUB</h1>
+      <p style="color: black;">Gostou do site ou tem alguma dúvida?</p>
+      <p>Entre em contato conosco: <a href="mailto:suportegymclub@gmail.com" target ="_blank">suportegymclub@gmail.com</a></p>
+      <p>Dicas ou críticas digite abaixo</p>
+      
+      <button id="closeAvaible" class="btnFeedback">Ok</button>
+    `;
+    Avaible.style.background = "white";
+    
+    document.body.appendChild(Avaible);
+  
+    Avaible.showModal();
+
+const closeAvaible = document.querySelector("#closeAvaible").addEventListener("click",()=>{
+  Avaible.remove();
+
 });
+  }
+  
+});
+
+
+
+
 });
