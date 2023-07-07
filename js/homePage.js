@@ -134,7 +134,6 @@ let contador = 0;
 
 
 finalizarButton.addEventListener('click', function() {
-  alert("Compra finalizada com sucesso!");
   
   carrinhoConteudo.innerHTML = "";
   total = 0; 
@@ -144,11 +143,12 @@ finalizarButton.addEventListener('click', function() {
   if (contador !== 0) {
     const Avaible = document.createElement("dialog");
     Avaible.innerHTML = `
-    <h1 style="color: black; text-align:center;">Equipe GYM CLUB</h1>
+    <h1 style="color: black; text-align:center;">Compra Efetuada!</h1>
       <p style="color: black;">Gostou do site ou tem alguma dúvida?</p>
-      <p>Entre em contato conosco: <a href="mailto:suportegymclub@gmail.com" target ="_blank">suportegymclub@gmail.com</a></p>
-      <p>Dicas ou críticas digite abaixo</p>
-      
+      <p style="color: black;>Entre em contato conosco: <a href="mailto:suportegymclub@gmail.com" target ="_blank">suportegymclub@gmail.com</a></p>
+      <br>
+      <button class="btnAvaible" id="btnAvaible">Avalie nosso site</button>
+
       <button id="closeAvaible" class="btnFeedback">Ok</button>
     `;
     Avaible.style.background = "white";
@@ -156,6 +156,12 @@ finalizarButton.addEventListener('click', function() {
     document.body.appendChild(Avaible);
   
     Avaible.showModal();
+const btnAvaible = document.querySelector("#btnAvaible").addEventListener("click",()=>{
+  const url = "avaliacoes.html";
+  window.location.href = url;
+
+
+})
 
 const closeAvaible = document.querySelector("#closeAvaible").addEventListener("click",()=>{
   Avaible.remove();

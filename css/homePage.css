@@ -270,6 +270,20 @@ dialog h4{
     margin: 10px;
     font-size: 15px;
 }
+.btnAvaible{
+   
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+    background-image: linear-gradient(to right, #070579, #070707);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
 /*Media Query */
 
 
