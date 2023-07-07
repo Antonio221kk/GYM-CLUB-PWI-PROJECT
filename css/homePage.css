@@ -171,12 +171,7 @@ padding: 10px;
 
 }
 #saudacao{
-    background-image: url(imagens/Angular\ Geometry.gif);
-    background-repeat: repeat ;
-    background-size:cover;
-    background-attachment: fixed;
-    background-position: center;
-    backdrop-filter: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     background-color: 10px;
     padding: 10px;
@@ -200,12 +195,6 @@ padding: 10px;
     transition: all .50s ease;
 }
 
-
-.repart{
-    margin: 10px;
-    border: double;
-    border-color: white ;
-}
 /*--Suplementos--*/
 .div-container {
     display: flex;
