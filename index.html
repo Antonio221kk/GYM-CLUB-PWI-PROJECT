@@ -2,99 +2,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
     <script type="text/javascript" src="js/scripts.js" async></script>
-    <link rel="icon" href="css/indexIcon.svg" type="svg">
-    <title>Gym Club Academy</title>
+    <title>Welcome to Gym Club</title>
 </head>
+
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <img src="css/imagens/logoIndex.png">
-            </div>
-            <div class="nav-list">
-                <ul>
-                   <button class="nav-item" onclick="btnAcad()">Sobre a Academia</button>
-                   <button class="nav-item" onclick="btnDevs()">Desenvolvedores</button>
-                    <a href="http://www.charqueadas.ifsul.edu.br/" target="_blank"><button class="nav-item">Instituto Federal</button></a>
+    <header id="header">
 
-                </ul>
-
-            </div>
-
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="css/imagens/ menu_white_36dp.svg" alt=""></button>
-            </div>
-        </nav>
-        <div class="mobile-menu">
-            <ul>
-                <button class="nav-item" onclick="btnAcad()">Sobre a Academia</button>
-               <button class="nav-item" onclick="btnDevs()">Desenvolvedores</button>
-               <a href="http://www.charqueadas.ifsul.edu.br/" target="_blank"><button class="nav-item">Instituto Federal</button></a>
-            </ul>
-
+        <div class="img-header">
+            <img src="css/imagens/logoIndex.png" alt="Gym Club">
         </div>
+        <div class="div-btn">
+            <a href="#header" class="btnHome" onclick="redSobre()">Home</a>
+            <a href="#h1-treinos" class="btnDiv">Planejamento</a>
+            <a href="#h1-planos" class="btnDiv">Planos</a>
+            <a href="#IMC" class="btnDiv">IMC</a>
+            <button class="btnCadastro">Seja aluno(a)</button>
+        </div>
+
     </header>
 
-<div class="container">
-    <div class="r">
-        <form id="form-register">
-            <h2>Registre-se</h2>
+    <section class="sobre">
+        <div class="sobre-span">
+            <span>Onde a saúde, o fitness e a arquitetura moderna se</span>
+            <span>encontram para criar a experiência perfeita de treinamento físico</span>
+            <button class="btnSobre">Comece agora <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="img-sobre">
+            <img src="/css/imagens/sobreindex.jpg">
+        </div>
 
-            <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" placeholder="Digite seu nome">
-            </div>
+        
+    </section>
+    <section>
 
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu email">
-            </div>
-            <div class="form-group">
-            <label for="senha">Senha:</label>
-            <input type="text" id="senha" name="senha" placeholder="Digite a senha">
+        <div class="marcas">
+            <img src="css/imagens/max-titanium.svg" alt="max titanium">
+            <img src="css/imagens/drpeanut.svg" alt="dr peanut">
+            <img src="css/imagens/blackskull.svg" alt="black skull">
+        </div>
+    </section>
 
-            </div>
-            <div class="form-group">
-                <label for="options">Planos GYM CLUB:</label>
-                <select id="options" name="options">
-                    <option value="diario">Diário R$20</option>
-                    <option value="mensal">Mensal R$80</option>
-                    <option value="trimestre">Trimestral R$200</option>
-                    <option value="anual">Anual R$900</option>
-                </select>
 
-            </div>
+    <section class="treinos">
+        <div>
+            <h1 id="h1-treinos">Planejamento</h1>
+        </div>
+    <div class="div-container">    
+       <div class="box">
+        <div class="img-box">
+            <img src="css/imagens/haltere.png">
+        </div>
+        <h3>Flexione o Musculo!</h3>
+        <p>Crie tensão no musculo em seu treino para gerar hipertofria e fibras musculares!</p>
 
-            <button id="register" type="submit">Registrar</button>
-            
-            <span id="spanRegi"></span>
-        </form>
+       </div>
+       <div class="box">
+        <div class="img-box">
+            <img src="css/imagens/garrafa-de-agua.png">
+        </div>
+        <h3>Beba Água!</h3>
+        <p>Beber água antes,durante e após o treino, ajuda na recuperação,hidratação muscular e eliminação de toxínas no corpo</p>
+       </div>
+       <div class="box">
+        <div class="img-box">
+            <img src="css/imagens/bicicleta.png">
+        </div>
+        <h3>Faça Cardio!</h3>
+        <p>O Cardio ajuda na disposição, circulação do sangue, emagrecimento e melhora do sono</p>
+       </div>
+        <div class="box">
+        <div class="img-box">
+            <img src="css/imagens/prato.png">
+        </div>
+        <h3>Nutrição</h3>
+        <p>Saiba como se alimentar! Entre em contato com nossos nutricionistas!</p>
+        <button class="btnNutri"><i class="fa-solid fa-arrow-right"></i></button>
+       </div>
     </div>
-    <div class="r">
-        <form id="form-logins">
-            <h2>Login</h2>
+    <div class="aviso"><span>Atenção! Após seu registro você poderá selecionar seu treino!</span>
+        <br>
+    <span>Não perca a oportunidade! Venha ser aluno da Gym!</span>
+    </div>   
+    </section>
 
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="text" id="senha-log" name="senha" placeholder="Digite a senha">
-
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email-log" name="email" placeholder="Digite seu email">
-            </div>
-            <button id="login" type="submit">Login</button>
-            <br>
-            <span id="spanMensagem"></span>
-        </form>
-
+<section class="planos">
+        <div>
+            <h1 id="h1-planos">Planos</h1>
+        </div>
+    <div class="div-container">    
+       
+       <div class="box">
+        <div class="img-box">
+            <img src="css/imagens/dia.png">
+        </div>
+        <h3>Diário</h3>
+        
+        <ul>
+            <li>Flexibilidade</li>
+            <li>Sem compromisso</li>
+            <li>Custo mais alto</li>
+            <li>Falta de consistencia</li>
+        </ul>
+        <div class="div-value">
+        <button class="btnValue">R$20.00</button>
+        </div>
+       </div>
+       <div class="box">
+        <div class="img-box">
+            <img src="css/imagens/mes.png">
+        </div>
+        <h3>Mensal</h3>
+        <ul>
+            <li>Econômia</li>
+            <li>Acesso Ilimitado</li>
+            <li>Consistencia</li>
+            <li>Benefícios</li>
+        </ul>
+        <div class="div-value">
+        <button class="btnValue">R$80.00</button>
+        </div>
+       </div>
+        <div class="box">
+        <div class="img-box">
+            <img src="css/imagens/ano.png">
+        </div>
+        <h3>Anual</h3>
+        <ul>
+            <li>Sem preocupação</li>
+            <li>365 dias</li>
+            <li>Mega desconto</li>
+            <li>Compromisso 100%</li>
+        </ul>
+        <div class="div-value">
+        <button class="btnValue">R$900.00</button>
+        </div>
+        
+       </div>
     </div>
+      
+    </section>
 
+    <section class="IMC">
+        <div class="header">
+          <h1>Calcule seu IMC</h1>
+        </div>
+        <div class="sub-header">
+            <h3>IMC é uma medida internacional usada para calcular se uma pessoa está no peso ideal.</h3>
+        </div>
+        <div class="container">
+          <form id="form-imc">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" placeholder="00.00" required>
+      
+            <label for="altura">Altura (metros):</label>
+            <input type="number" id="altura" required>
+      
+            <button type="button" class="btnIMC" onclick="calcularIMC()">Calcular</button>
+          </form>
+          <div id="resultado"></div>
+        </div>
+      </section>
+  
+    
+  
+   
+<div class="div-back">
+   <a href="#header"><i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i></a>
 </div>
-
 </body>
+
 </html>
