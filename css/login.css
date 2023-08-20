@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: #13274F;
+    font-family: 'Quicksand', sans-serif;
+}
+header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    
+}
+header img {
+    max-width: 85%;
+    max-height: 120px;
+
+}
+header h1{
+    text-align: center;
+}
+
+section {
+    margin-top: 5%;
+    justify-content: center;
+    display: flex;
+    
+}
+section h1{
+    text-align: center;
+    padding: 5px;
+    font-style: italic;
+    font-size: 33px;
+}
+
+.icons i{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 40px;
+    padding: 5px;
+}
+
+.login,
+.register {
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    width: 20%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+
+input[type="submit"] {
+    
+    padding: 7px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border:solid 3px #2152b3;
+    color: white;
+    border-radius: 10px;
+
+    
+}
+input[type="email"],
+input[type="text"],
+input[type="password"]{
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    border: solid 2px #2152b3;
+}
+::placeholder{
+    color: white;
+    font-size: 15px;
+}
+select{
+    padding: 5px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: solid 2px #2152b3;
+    border-radius: 10px;
+}

@@ -75,6 +75,7 @@ header img {
     /* Define o preenchimento inicial (0%) do background na direção horizontal */
     background-repeat: no-repeat;
     transition: background-size 0.5s;
+    cursor: pointer;
 
 }
 .btnCadastro:hover {
@@ -145,6 +146,7 @@ header img {
 .btnSobre:hover {
     background-size: 100% 100%;
     color: white;
+    cursor: pointer;
 }
 .btnSobre i{
     justify-content: center;
@@ -164,7 +166,7 @@ header img {
     margin-top: 3%;
     font-size: 40px;
     color: white;
-   text-decoration: underline;
+   
     
     
 }
@@ -214,6 +216,7 @@ header img {
     font-size: 20px;
     padding: 3px;
     border-radius: 5px;
+    cursor: pointer;
     
 }
 .btnNutri:hover{
@@ -252,6 +255,7 @@ header img {
     color: white;
     font-size: 20px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .planos li{
@@ -272,7 +276,7 @@ header img {
     margin-top: 3%;
     font-size: 40px;
     color: white;
-   text-decoration: underline;
+   
 }
 .div-back i{
     position: fixed;
@@ -289,13 +293,14 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 
 .IMC .header {
   margin-top: 3%;
   font-size: 25px;
   color: white;
-  text-decoration: underline;
+  
 }
 
 .container {
@@ -303,6 +308,7 @@ header img {
   padding: 10px;
   margin-top: 5px;
   text-align: center;
+  border-radius: 10px;
 }
 
 #form-imc label {
@@ -312,22 +318,54 @@ header img {
 }
 
 #form-imc input {
-  width: 100%;
+  display: flex;
+  width: 30%;
+  align-items: center;
   padding: 5px;
   margin-bottom: 10px;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  border: solid 2px rgb(19, 62, 253);
+  color: white;
+
+ 
 }
 
 .btnIMC {
-  display: block;
+  display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   background-color: #007bff;
   color: #fff;
   border: none;
+  font-size: 20px;
   cursor: pointer;
 }
 
 #resultado {
   margin-top: 20px;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  width: 100%;
+}
+footer {
+    margin-top: 10%;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
+footer i {
+    font-size: 30px;
+    padding: 10px;
+
+}

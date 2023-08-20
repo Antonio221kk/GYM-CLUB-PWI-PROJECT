@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="shortcut icon" href="css/imagens/registered.png" type="image/x-icon">
+    <script src="js/login.js" async></script>
+    <title>Espaço do Cliente</title>
+</head>
+
+<body>
+    <header>
+        <div class="img-header">
+            <img src="css/imagens/logoIndex.png" alt="Gym Club">
+        </div>
+
+        <h1>Espaço do Cliente Gym Club</h1>
+    </header>
+    <section>
+        <div class="login">
+            <div class="login-h1">
+                <h1>Login</h1>
+            </div>
+            <form id="formLogin">
+                <label for="email">Email:</label>
+                <input type="email" class="email" id="email" placeholder="Digite seu email">
+                <label for="password">Senha:</label>
+                <input type="password" class="senha" id="senha" placeholder="Digite sua senha">
+                <input type="submit" value="Entrar" >
+            </form>
+            <div class="icons">
+                <h4>Entre em contato</h4>
+                <i class="fa-brands fa-instagram" style="color: #d819e6;"></i>
+                <i class="fa-brands fa-whatsapp" style="color: #0dd325;"></i>
+                <i class="fa-solid fa-envelope-circle-check" style="color: #ffffff;"></i>
+            </div>
+
+        </div>
+            
+        <div class="register">
+            <div class="register-h1">
+                <h1>Registro</h1>
+            </div>
+            <form id="formRegister">
+                <label for="name">Nome:</label>
+                <input type="text" class="name" placeholder="Nome completo" id="inputName">
+                <label for="email">Email:</label>
+                <input type="email" class="email" placeholder="Seu melhor email aqui" id="inputEmail">
+                <label for="password">Senha:</label>
+                <input type="password" class="senha" placeholder="Digite sua senha" id="inputPass">
+                <label for="plano">Selecione seu plano:</label>
+                <select id="options" name="options">
+                    <option value="diario">Diário R$20</option>
+                    <option value="mensal">Mensal R$80</option>
+                    <option value="anual">Anual R$900</option>
+                </select>
+                <input type="submit" value="Entrar">
+                
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
