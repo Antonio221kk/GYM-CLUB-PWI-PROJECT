@@ -31,10 +31,6 @@ header {
     color: #fff;
     box-shadow: 0px 8px 15px rgba(33, 33, 230, 0.6);
 }
-
-
-
-
 header img {
     max-width: 85%;
     max-height: 120px;
@@ -98,6 +94,7 @@ header img {
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
+    border-radius: 10px;
 
 }
 
@@ -112,14 +109,13 @@ header img {
 .sobre-span {
     display: flex;
     flex-direction: column;
-    /* Organiza os elementos em coluna */
+   padding: 10px;
     align-items: center;
-    /* Centraliza horizontalmente */
     color: white;
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
-    /* Espaçamento entre os spans e o botão */
+   
 }
 
 .btnSobre {
@@ -290,6 +286,7 @@ header img {
     font-size: 20px;
 }
 .IMC {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -304,6 +301,7 @@ header img {
 }
 
 .container {
+  margin-top: 3%;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
   margin-top: 5px;
@@ -334,7 +332,9 @@ header img {
 
 .btnIMC {
   display: flex;
-  width: 100%;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -368,4 +368,145 @@ footer i {
     font-size: 30px;
     padding: 10px;
 
+}
+
+/* Media Query @ */
+
+@media (max-width:1920px){
+.sobre{
+   
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.marcas img{
+    width: 245px;
+}
+.box{
+    width: 20%;
+    height: 320px;
+}
+.box p {
+   font-size: 21px; 
+}
+.box h3{
+    font-size: 27px;
+}
+.box img{
+    height: 42px;
+}
+.aviso span{
+    font-size: 26px;
+}
+.planos li{
+    font-size: 22px;
+}
+#form-imc label{
+    font-size: 25px;
+}
+#form-imc input{
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 8px;
+    width: 50%;
+    font-size: 20px;
+}
+.sub-header{
+    font-size: 22px;
+    flex-direction: column;
+}
+.btnIMC{
+    font-size: 25px;
+}
+#resultado{
+    font-size: 25px;
+}
+footer{
+    margin-top: 5%;
+}
+footer h2{
+    font-size: 30px;
+}
+footer i{
+    font-size: 42px;
+}
+footer p{
+    font-size: 27px;
+}
+.div-back i {
+    font-size: 35px;
+}
+
+}
+
+@media (max-width:1440px){
+.marcas img{
+    width: 230px;
+
+    }
+    .box h3{
+        font-size: 22px;
+    }
+.box p{
+    font-size: 20px;
+}
+.aviso span{
+    font-size: 25px;
+}
+.planos li{
+    font-size: 20px;
+}
+footer{
+    margin-top: 10%;
+}
+footer h2{
+    font-size: 30px;
+}
+footer i{
+    font-size: 40px;
+}
+footer p{
+    font-size: 23px;
+}
+.div-back i {
+    font-size: 32px;
+}
+
+}
+@media (max-width:1336px){
+    .marcas img{
+        width: 220px;
+    
+        }
+        .box h3{
+            font-size: 20px;
+        }
+    .box p{
+        font-size: 19px;
+    }
+    .aviso span{
+        font-size: 22px;
+    }
+    .planos li{
+        font-size: 20px;
+    }
+    footer{
+        margin-top: 10%;
+    }
+    footer h2{
+        font-size: 30px;
+    }
+    footer i{
+        font-size: 40px;
+    }
+    footer p{
+        font-size: 23px;
+    }
+    .div-back i {
+        font-size: 32px;
+    }
 }

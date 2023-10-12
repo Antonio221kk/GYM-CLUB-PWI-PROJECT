@@ -26,27 +26,30 @@
         </div>
 
     </header>
+   
 
     <section class="sobre">
         <div class="sobre-span">
             <span>Onde a saúde, o fitness e a arquitetura moderna se</span>
             <span>encontram para criar a experiência perfeita de treinamento físico</span>
-            <button class="btnSobre" onclick="transfer()">Comece agora <i class="fa-solid fa-arrow-right"></i></button>
+            <div class="marcas">
+                <img src="css/imagens/max-titanium.svg" alt="max titanium">
+                <img src="css/imagens/drpeanut.svg" alt="dr peanut">
+                <img src="css/imagens/blackskull.svg" alt="black skull">
+            </div>
         </div>
-        <div class="img-sobre">
-            <img src="/css/imagens/sobreindex.jpg">
-        </div>
+      
 
         
     </section>
-    <section>
+    <!-- <section>
 
         <div class="marcas">
             <img src="css/imagens/max-titanium.svg" alt="max titanium">
             <img src="css/imagens/drpeanut.svg" alt="dr peanut">
             <img src="css/imagens/blackskull.svg" alt="black skull">
         </div>
-    </section>
+    </section> -->
 
 
     <section class="treinos">
@@ -82,12 +85,16 @@
         </div>
         <h3>Nutrição</h3>
         <p>Saiba como se alimentar! Entre em contato com nossos nutricionistas!</p>
-        <button class="btnNutri"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="btnNutri" onclick="btnNutri()"><i class="fa-solid fa-arrow-right"></i></button>
+        <dialog>
+            <button onclick="closeDialog()">|-X-|</button>
+            <img class="QRCode">
+        </dialog>
        </div>
     </div>
-    <div class="aviso"><span>Atenção! Após seu registro você poderá selecionar seu treino!</span>
+    <div class="aviso"><span>Atenção! Oferecemos somente treinos de adaptação</span>
         <br>
-    <span>Não perca a oportunidade! Venha ser aluno da Gym!</span>
+    <span>Para um treino periodizado, instrutores devem ser consultados!</span>
     </div>   
     </section>
 
@@ -154,15 +161,16 @@
         </div>
         <div class="container">
         <div class="sub-header">
-            <h3>IMC é uma medida internacional usada para calcular se uma pessoa está no peso ideal.</h3>
+            <h3>IMC é uma medida internacional usada para calcular </h3>
+            <h3>se uma pessoa está no peso ideal.</h3>
         </div>
         
           <form id="form-imc">
             <label for="peso">Peso (kg):</label>
-            <input type="number" id="peso" placeholder="00.00" required>
+            <input type="number" id="peso" placeholder="Peso" required>
       
             <label for="altura">Altura (metros):</label>
-            <input type="number" id="altura" placeholder="000" required>
+            <input type="number" id="altura" placeholder="Altura" required>
       
             <button type="button" class="btnIMC" onclick="calcularIMC()">Calcular</button>
           </form>

@@ -1,3 +1,17 @@
+
+
+// const dialog = document.querySelector("dialog")
+// function btnNutri(){
+//     const GoogleCharsAPI = 'https://chart.googleapis.com/chart?&cht=qr&chs=100x100&chl=https://www.youtube.com/';
+//   document.querySelector(".QRCode").src = GoogleCharsAPI;
+
+//   dialog.showModal();
+
+// }
+// function closeDialog(){
+//     dialog.close()
+// }
+
 function transfer(){
     window.location.href = "login.html"
 }
@@ -6,7 +20,13 @@ function transfer(){
 function calcularIMC(){
     let peso = document.querySelector("#peso").value;
     let altura = document.querySelector("#altura").value;
+    
 
+    if(peso == "" || altura == ""){
+        document.querySelector("#resultado").textContent = `${"Campos não preenchidos corretamente"}`
+       
+    }
+    
     if(peso && altura){
         let alturaFinal = altura**2;
         let calculo = peso / alturaFinal;
@@ -31,9 +51,5 @@ function calcularIMC(){
     if(imc >= 40.0){
         document.querySelector("#resultado").textContent = `${imc + " Obesidade grau III (Morbida)"}`
     }
-}else{
-    
-    console.log("Nenhum digito")
 }
-
 }

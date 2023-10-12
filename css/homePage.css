@@ -106,7 +106,7 @@ h2 {
 }
 
 footer {
-    margin-top: 100%;
+    
     bottom: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -213,57 +213,6 @@ footer i {
     transition: all .50s ease;
 }
 
-/*--Suplementos--*/
-.div-container {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.div-item {
-    width: 100%;
-    height: 100px;
-
-}
-
-.marca-box {
-    max-width: 65%;
-    max-height: 220%;
-    border-radius: 10px;
-}
-
-.suple-box {
-    max-width: 60%;
-}
-
-.content-suple {
-    max-width: 85%;
-    border-style: solid;
-    border-radius: 10px;
-    margin: 10px;
-    border-color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.removeItems {
-    padding: 5px;
-    border-style: double;
-    border-radius: 10px;
-    background-color: transparent;
-    color: black;
-    border-color: gray;
-
-}
-
-.finalizarCompra {
-    background-color: red;
-    margin-top: 12px;
-    border-radius: 10px;
-    padding: 5px;
-    border-radius: 10px;
-    color: white;
-    border-color: black;
-}
 
 dialog {
     padding: 10px;
@@ -282,9 +231,7 @@ dialog {
     color: white;
 }
 
-dialog h4 {
-    margin-top: 10px;
-}
+
 
 .closeMachines {
     background-color: #173a66;

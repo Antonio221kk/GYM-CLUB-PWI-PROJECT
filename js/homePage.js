@@ -12,7 +12,7 @@ saudacao.innerHTML = "<p style='color:white'>Boas vindas, " + decodeURIComponent
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
     const btnPeito = document.querySelector("#showPeito");
     const btnPernas = document.querySelector("#showPernas");
     const btnOmbros = document.querySelector("#showOmbros");
@@ -63,115 +63,4 @@ document.addEventListener("DOMContentLoaded", () => {
       dialogCardio.close();
     });
     
-  });
-
-  //carrinho de compras
-
-function toggleCarrinho() {
-  const carrinho = document.querySelector('.carrinho-conteudo');
-  carrinho.classList.toggle('aberto');
-}
-document.addEventListener('DOMContentLoaded',() =>{
-  const btnCarrinho = document.querySelector('.btnCarrinho');
-  btnCarrinho.addEventListener('click', toggleCarrinho);
-
-let contentSuples = document.querySelectorAll('.content-suple');
-let carrinhoConteudo = document.querySelector('.carrinho-conteudo');
-let total = 0;
-let totalElement = document.createElement('p');
-totalElement.classList.add('total');
-carrinhoConteudo.appendChild(totalElement);
-
-// Função para atualizar o total no carrinho
-function atualizarTotal() {
-  totalElement.innerText = "Total: R$ " + total.toFixed(2);
-}
-
-// Função para remover um item do carrinho
-function removerItem(itemElement, preco) {
-  total -= preco;
-  itemElement.remove();
-  atualizarTotal();
-}
-
-// Adiciona um ouvinte de evento de clique em cada div com a classe .content-suple
-contentSuples.forEach(function(contentSuple) {
-  contentSuple.addEventListener('click', function() {
-    let titulo = contentSuple.querySelector('h1').innerText;
-    let preco = parseFloat(contentSuple.querySelector('h3').innerText.replace('R$', ''));
-    total += preco;
-
-    // Cria um elemento para o item no carrinho
-    let itemElement = document.createElement('div');
-    itemElement.classList.add('item-carrinho');
-    itemElement.innerHTML = "<p>" + titulo + " - R$ " + preco.toFixed(2) + "</p>";
-    
-    // Cria um botão de remover para o item
-    const removerButton = document.createElement('button');
-    removerButton.classList.add('removeItems');
-    removerButton.innerText = 'Remover Item';
-    removerButton.addEventListener('click', function() {
-      removerItem(itemElement, preco);
-    });
-    
-    itemElement.appendChild(removerButton);
-
-    // Adiciona o item ao carrinho
-    carrinhoConteudo.appendChild(itemElement);
-    
-    carrinhoConteudo.appendChild(finalizarButton);
-    atualizarTotal();
-  });
-});
-
-// Botão de Finalizar Compra
-
-const finalizarButton = document.createElement('button');
-finalizarButton.classList.add('finalizarCompra');
-finalizarButton.innerText = 'Comprar agora';
-let contador = 0;
-
-
-
-finalizarButton.addEventListener('click', function() {
-  
-  carrinhoConteudo.innerHTML = "";
-  total = 0; 
-  contador = 1;
-  atualizarTotal();
-  
-  if (contador !== 0) {
-    const Avaible = document.createElement("dialog");
-    Avaible.innerHTML = `
-    <h1 style="color: black; text-align:center;">Compra Efetuada!</h1>
-      <p style="color: black;">Gostou do site ou tem alguma dúvida?</p>
-      <p style="color: black;>Entre em contato conosco: <a href="mailto:suportegymclub@gmail.com" target ="_blank">suportegymclub@gmail.com</a></p>
-      <br>
-      <button class="btnAvaible" id="btnAvaible">Avalie nosso site</button>
-
-      <button id="closeAvaible" class="btnFeedback">Ok</button>
-    `;
-    Avaible.style.background = "white";
-    
-    document.body.appendChild(Avaible);
-  
-    Avaible.showModal();
-const btnAvaible = document.querySelector("#btnAvaible").addEventListener("click",()=>{
-  const url = "avaliacoes.html";
-  window.location.href = url;
-
-
-})
-
-const closeAvaible = document.querySelector("#closeAvaible").addEventListener("click",()=>{
-  Avaible.remove();
-
-});
-  }
-  
-});
-
-
-
-
-});
+ 
