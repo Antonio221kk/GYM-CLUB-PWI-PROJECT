@@ -389,14 +389,14 @@ footer i {
 
 }
 .marcas img{
-    width: 245px;
+    width: 240px;
 }
 .box{
     width: 20%;
     height: 320px;
 }
 .box p {
-   font-size: 21px; 
+   font-size: 20px; 
 }
 .box h3{
     font-size: 27px;
@@ -425,10 +425,10 @@ footer i {
     flex-direction: column;
 }
 .btnIMC{
-    font-size: 25px;
+    font-size: 22px;
 }
 #resultado{
-    font-size: 25px;
+    font-size: 22px;
 }
 footer{
     margin-top: 5%;
@@ -450,14 +450,14 @@ footer p{
 
 @media (max-width:1440px){
 .marcas img{
-    width: 230px;
+    width: 210px;
 
     }
     .box h3{
         font-size: 22px;
     }
 .box p{
-    font-size: 20px;
+    font-size: 15px;
 }
 .aviso span{
     font-size: 25px;
@@ -484,7 +484,7 @@ footer p{
 }
 @media (max-width:1336px){
     .marcas img{
-        width: 220px;
+        width: 210px;
     
         }
         .box h3{
