@@ -1,16 +1,28 @@
+const btnMobile = document.querySelector(".btnMobile");
+// imagem é a bar do menu mobile
+const imagem = document.querySelector('#menuImage');
+btnMobile.addEventListener('click',menuMobile)
+btnMobile.addEventListener('touchstart',menuMobile)
 
+function menuMobile(event){
+    if(event.type === 'touchstart') {
+    event.preventDefaut();
+}
+    const divBtn = document.querySelector(".div-btn");
+    divBtn.classList.toggle('active');
+    const active = divBtn.classList.contains('active');
+    event.currentTarget.setAttribute('aria-expanded',active);
+    if(active){ event.currentTarget.setAttribute('arial-label', 'Fechar Menu');
+    }else{
+        event.currentTarget.setAttribute('arial-label','Abrir Menu');
+    }
+    if (imagem.src.endsWith('menu.png')) {
+        imagem.src = 'css/imagens/bar-close.png';
+      } else {
+        imagem.src = 'css/imagens/menu.png';
+        }
+}
 
-// const dialog = document.querySelector("dialog")
-// function btnNutri(){
-//     const GoogleCharsAPI = 'https://chart.googleapis.com/chart?&cht=qr&chs=100x100&chl=https://www.youtube.com/';
-//   document.querySelector(".QRCode").src = GoogleCharsAPI;
-
-//   dialog.showModal();
-
-// }
-// function closeDialog(){
-//     dialog.close()
-// }
 
 function transfer(){
     window.location.href = "login.html"

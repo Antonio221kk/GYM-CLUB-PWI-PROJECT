@@ -36,6 +36,12 @@ header img {
     max-height: 120px;
 
 }
+.btnMobile{
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
 
 .btnDiv {
     background-color: transparent;
@@ -87,14 +93,13 @@ header img {
 
 }
 
+
+
 .sobre {
-    margin-top: 3%;
+    margin-top: 5%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    border-radius: 10px;
+   width: 100%;
 
 }
 
@@ -228,9 +233,9 @@ header img {
     
 }
 .marcas{
-    margin-top: 1%;
+    margin-top: 2%;
     display: flex;
-    gap: 2rem;
+    gap: 5rem;
     justify-content: center;
 }
 .marcas img{
@@ -509,4 +514,46 @@ footer p{
     .div-back i {
         font-size: 32px;
     }
+}
+@media (max-width:1320px){
+   .btnMobile{
+    display: flex;
+    padding: .5rem 1rem;
+    cursor: pointer;
+   }
+   
+   .menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: #16387a;
+    right: 0px;
+    margin-top: 10px;
+    flex-direction: column;
+    padding: 20px;
+   z-index: 1000;
+   height: 0;
+   transition: .6s;
+   visibility: hidden;
+   overflow-y: hidden;
+   }
+   .div-btn.active .menu {
+    display: flex;
+    height: 100vh;
+    visibility: visible;
+    overflow-y: auto;
+}
+   .menu a,button{
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+   }
+   
+.btnMobile img{
+   display: block;
+   max-width: 60px;
+
+}
+
+
 }
