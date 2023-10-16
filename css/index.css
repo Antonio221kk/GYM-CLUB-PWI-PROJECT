@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,33 +11,52 @@
 
 body {
     background-color: #13274F;
-    height: 2000px;
-    
+
+
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 6px; 
+}
+
+
+
+
+/* Estilo da barra de rolagem de fundo */
+
 
 header {
     display: flex;
+    
     justify-content: space-between;
     align-items: center;
-    margin-right: 5%;
-    margin-left: 5%;
     box-shadow: black;
     font-family: 'Quicksand', sans-serif;
     font-size: 24px;
     padding: 20px;
     text-align: center;
     color: #fff;
+    background-color:#0f1f3f ;
     box-shadow: 0px 8px 15px rgba(33, 33, 230, 0.6);
 }
+
 header img {
     max-width: 85%;
     max-height: 120px;
 
 }
-.btnMobile{
+
+.btnMobile {
     display: none;
     border: none;
     background-color: transparent;
@@ -80,6 +100,7 @@ header img {
     cursor: pointer;
 
 }
+
 .btnCadastro:hover {
     background-size: 100% 100%;
     color: white;
@@ -99,7 +120,7 @@ header img {
     margin-top: 5%;
     display: flex;
     justify-content: center;
-   width: 100%;
+    width: 100%;
 
 }
 
@@ -114,13 +135,13 @@ header img {
 .sobre-span {
     display: flex;
     flex-direction: column;
-   padding: 10px;
+    padding: 10px;
     align-items: center;
     color: white;
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
-   
+
 }
 
 .btnSobre {
@@ -149,65 +170,73 @@ header img {
     color: white;
     cursor: pointer;
 }
-.btnSobre i{
+
+.btnSobre i {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    margin-left: 5px ;
+    margin-left: 5px;
 }
-.treinos{
+
+.treinos {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.treinos h1{
+.treinos h1 {
     align-items: center;
     display: flex;
     justify-content: center;
     margin-top: 3%;
     font-size: 40px;
     color: white;
-   
-    
-    
+
+
+
 }
-.div-container{
+
+.div-container {
     margin-top: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.box{
+.box {
     width: 20%;
     height: 280px;
     background-color: rgba(0, 0, 0, 0.7);
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    
+
 }
-.box:hover{
+
+.box:hover {
     background-color: #0a1a75;
     transition: all .5s ease;
 }
 
-.box h2{
+.box h2 {
     text-align: center;
     color: white;
 }
-.box img{
+
+.box img {
     margin: 15px;
 }
-.box h3{
+
+.box h3 {
     color: white;
     padding: 5px;
 }
-.box p{
+
+.box p {
     color: white;
     margin-top: 10px;
 }
-.btnNutri{
+
+.btnNutri {
     float: right;
     margin-right: 10%;
     margin-top: 10%;
@@ -218,37 +247,42 @@ header img {
     padding: 3px;
     border-radius: 5px;
     cursor: pointer;
-    
+
 }
-.btnNutri:hover{
+
+.btnNutri:hover {
     background-color: gray;
     transition: all .5 ease;
 }
-.aviso{
+
+.aviso {
     justify-content: center;
     text-align: center;
     align-items: center;
-    color: red; 
+    color: red;
     font-size: 20px;
-    
+
 }
-.marcas{
+
+.marcas {
     margin-top: 2%;
     display: flex;
     gap: 5rem;
     justify-content: center;
 }
-.marcas img{
+
+.marcas img {
     width: 200px;
 }
 
-.div-value{
+.div-value {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-.btnValue{
+
+.btnValue {
     background-color: red;
     border: none;
     padding: 10px;
@@ -259,30 +293,33 @@ header img {
     cursor: pointer;
 }
 
-.planos li{
+.planos li {
     color: white;
     align-items: center;
-    
+
 }
-.planos li::before{
+
+.planos li::before {
     content: "\2022";
     font-size: 20px;
     color: white;
     padding-right: 5%;
 }
-.planos h1{
+
+.planos h1 {
     align-items: center;
     display: flex;
     justify-content: center;
     margin-top: 3%;
     font-size: 40px;
     color: white;
-   
+
 }
-.div-back i{
+
+.div-back i {
     position: fixed;
     bottom: 20px;
-    right: 20px; 
+    right: 20px;
     padding: 10px;
     position: fixed;
     background-color: black;
@@ -290,74 +327,76 @@ header img {
     border-radius: 5px;
     font-size: 20px;
 }
+
 .IMC {
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
 }
 
 .IMC .header {
-  margin-top: 3%;
-  font-size: 25px;
-  color: white;
-  
+    margin-top: 3%;
+    font-size: 25px;
+    color: white;
+
 }
 
 .container {
-  margin-top: 3%;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  margin-top: 5px;
-  text-align: center;
-  border-radius: 10px;
+    margin-top: 3%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 #form-imc label {
-  display: flex;
-  
-  margin-bottom: 5px;
+    display: flex;
+
+    margin-bottom: 5px;
 }
 
 #form-imc input {
-  display: flex;
-  width: 30%;
-  align-items: center;
-  padding: 5px;
-  margin-bottom: 10px;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  border: solid 2px rgb(19, 62, 253);
-  color: white;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: solid 2px rgb(19, 62, 253);
+    color: white;
 
- 
+
 }
 
 .btnIMC {
-  display: flex;
-  margin-left: 25%;
-  margin-right: 25%;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
+    display: flex;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #resultado {
-  margin-top: 20px;
-  background-color: red;
-  color: white;
-  padding: 10px;
-  font-weight: bold;
-  width: 100%;
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
 }
+
 footer {
     margin-top: 10%;
     bottom: 0;
@@ -377,7 +416,7 @@ footer i {
 
 /* Media Query @ */
 
-@media (max-width:1920px){
+/* @media (max-width:1920px){
 .sobre{
    
     width: 50%;
@@ -446,9 +485,9 @@ footer p{
     font-size: 35px;
 }
 
-}
+} */
 
-@media (max-width:1440px){
+/* @media (max-width:1440px){
 .marcas img{
     width: 210px;
 
@@ -514,46 +553,203 @@ footer p{
     .div-back i {
         font-size: 32px;
     }
-}
-@media (max-width:1320px){
-   .btnMobile{
-    display: flex;
-    padding: .5rem 1rem;
-    cursor: pointer;
-   }
-   
-   .menu{
-    display: block;
-    position: absolute;
-    width: 100%;
-    background-color: #16387a;
-    right: 0px;
-    margin-top: 10px;
-    flex-direction: column;
-    padding: 20px;
-   z-index: 1000;
-   height: 0;
-   transition: .6s;
-   visibility: hidden;
-   overflow-y: hidden;
-   }
-   .div-btn.active .menu {
-    display: flex;
-    height: 100vh;
-    visibility: visible;
-    overflow-y: auto;
-}
-   .menu a,button{
-    padding: 1rem 0;
-    margin: 0 1rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-   }
-   
-.btnMobile img{
-   display: block;
-   max-width: 60px;
+} */
+@media (max-width:1320px) {
+    .btnMobile {
+        display: flex;
+        padding: .5rem 1rem;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: #13274F;
+        right: 0px;
+        margin-top: 10px;
+        flex-direction: column;
+        padding: 20px;
+        z-index: 1000;
+        height: 0;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .div-btn.active .menu {
+        display: flex;
+        height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .menu a,
+    button {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .btnMobile img {
+        display: block;
+        max-width: 60px;
+
+    }
 
 }
 
+@media (max-width:1024px) {
+    .sobre span {
+        font-size: 30px;
+    }
+
+    .box {
+        width: 50%;
+    }
+
+    .box img {
+        width: 35px;
+    }
+
+    #form-imc input,
+    label {
+        font-size: 20px;
+    }
+
+    #resultado {
+        font-size: 20px;
+    }
+
+    footer {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width:768px) {
+    .sobre span {
+        font-size: 20px;
+    }
+
+    .marcas img {
+        width: 20%;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .box h3 {
+        font-size: 15px;
+    }
+
+    .box p {
+        font-size: 15px;
+    }
+
+    .box img {
+        width: auto;
+    }
+
+    #form-imc input,
+    label {
+        font-size: 20px;
+    }
+
+    #resultado {
+        font-size: 20px;
+    }
+
+    footer {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width:425px) {
+     header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    } 
+    .sobre{
+        margin-top: 35%; 
+    }
+    header img {
+        max-width: 75%;
+        max-height: 60px;
+    }
+
+    .sobre span {
+        font-size: 15px;
+    }
+
+    .marcas {
+        display: block;
+
+    }
+
+    .marcas img {
+        display: flex;
+        margin-top: 10%;
+        width: 150px;
+        gap: 5rem;
+
+    }
+
+    .btnMobile img {
+        width: 30px;
+    }
+
+    .div-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+
+    }
+
+    .box p {
+        font-size: 15px;
+    }
+
+    .box {
+        width: 70%;
+
+    }
+    .aviso span{
+        font-size: 17px;
+    }
+    .container{
+        width: 80%;
+    }
+    .container h3{
+        font-size: 15px;
+       
+    }
+    #form-imc input,
+    label {
+        font-size: 15px;
+        width: auto;
+    }
+
+    #resultado {
+        font-size: 15px;
+    }
+    footer {
+        margin-top: 15%;
+
+    }
+    footer i{
+        font-size: 30px;
+    }
+    footer h2,p{
+        font-size: 20px;
+    }
+    .h1-imc{
+        font-size: 28px;
+    }
+    .div-back i{
+        right: 10px;
+    }
 
 }

@@ -21,7 +21,10 @@ function menuMobile(event){
       } else {
         imagem.src = 'css/imagens/menu.png';
         }
+        const menu = document.querySelector(".menu");
+      
 }
+
 
 
 function transfer(){
@@ -49,7 +52,7 @@ function calcularIMC(){
         document.querySelector("#resultado").textContent = `${imc + " Magresa"}`
     }
     if(imc >= 18.6 && imc <= 29.9){
-        document.querySelector("#resultado").textContent = `${imc + " Peso ideal! Congrats!"}`
+        document.querySelector("#resultado").textContent = `${imc + " Peso ideal! Parabéns!"}`
     }
     if(imc >= 25.0 && imc <= 29.9){
         document.querySelector("#resultado").textContent = `${imc + " Levemente acima do peso"}`

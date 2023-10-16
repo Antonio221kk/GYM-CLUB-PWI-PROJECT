@@ -43,22 +43,13 @@
 
         
     </section>
-    <!-- <section>
-
-        <div class="marcas">
-            <img src="css/imagens/max-titanium.svg" alt="max titanium">
-            <img src="css/imagens/drpeanut.svg" alt="dr peanut">
-            <img src="css/imagens/blackskull.svg" alt="black skull">
-        </div>
-    </section> -->
-
-
     <section class="treinos">
         <div>
             <h1 id="h1-treinos">Planejamento</h1>
         </div>
     <div class="div-container">    
-       <div class="box">
+       
+        <div class="box">
         <div class="img-box">
             <img src="css/imagens/haltere.png">
         </div>
@@ -87,10 +78,10 @@
         <h3>Nutrição</h3>
         <p>Saiba como se alimentar! Entre em contato com nossos nutricionistas!</p>
         <button class="btnNutri" onclick="btnNutri()"><i class="fa-solid fa-arrow-right"></i></button>
-        <dialog>
+        <!-- <dialog>
             <button onclick="closeDialog()">|-X-|</button>
             <img class="QRCode">
-        </dialog>
+        </dialog> -->
        </div>
     </div>
     <div class="aviso"><span>Atenção! Oferecemos somente treinos de adaptação</span>
@@ -158,7 +149,7 @@
 
     <section class="IMC" id="IMC">
         <div class="header">
-          <h1>Calcule seu IMC</h1>
+          <h1 class="h1-imc">Calcule seu IMC</h1>
         </div>
         <div class="container">
         <div class="sub-header">
@@ -168,10 +159,10 @@
         
           <form id="form-imc">
             <label for="peso">Peso (kg):</label>
-            <input type="number" id="peso" placeholder="Peso" required>
+            <input type="number" id="peso" placeholder="Peso (00.00)" required>
       
-            <label for="altura">Altura (metros):</label>
-            <input type="number" id="altura" placeholder="Altura" required>
+            <label for="altura">Altura (Centímetro):</label>
+            <input type="number" id="altura" placeholder="Altura (000)" required>
       
             <button type="button" class="btnIMC" onclick="calcularIMC()">Calcular</button>
           </form>
