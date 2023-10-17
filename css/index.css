@@ -11,8 +11,6 @@
 
 body {
     background-color: #13274F;
-
-
 }
 
 html {
@@ -28,12 +26,6 @@ html {
     background: white; 
     border-radius: 6px; 
 }
-
-
-
-
-/* Estilo da barra de rolagem de fundo */
-
 
 header {
     display: flex;

@@ -11,24 +11,23 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 header {
-    background-color: black;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(4, 16, 41);
     font-size: 12px;
+    align-items: center;
     padding: 10px;
     text-align: center;
     color: #fff;
+    box-shadow: 0px 2px  rgba(0, 0, 0, 0.7);
     
 }
 header img {
-    max-width: 85%;
+    max-width: 65%;
     max-height: 120px;
 
 }
-header h1{
-    text-align: center;
-}
+
 
 section {
     margin-top: 5%;
@@ -39,8 +38,7 @@ section {
 section h1{
     text-align: center;
     padding: 5px;
-    font-style: italic;
-    font-size: 33px;
+    font-size: 30px;
 }
 
 .icons i{
@@ -50,56 +48,191 @@ section h1{
     padding: 5px;
 }
 
-.login,
-.register {
-    margin: 20px;
+.login{
+    
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
     color: white;
     border-radius: 10px;
-    width: 20%;
+    width: calc(40% + 10px);
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input[type="text"],
+input[type="password"]{
+    height: 36px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 50%;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    border: solid 2px;
+}
+form label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 10px;
     font-size: 20px;
+    
 }
-
-
 input[type="submit"] {
     
     padding: 7px;
     margin-bottom: 10px;
+    width: 50%;
     font-size: 20px;
     cursor: pointer;
-    background-color: transparent;
-    border:solid 3px #2152b3;
+    background-image: linear-gradient(to right, #0f12c0 0%, #0a1a75 0%);
+    border:solid 3px transparent;
     color: white;
     border-radius: 10px;
-
-    
 }
-input[type="email"],
-input[type="text"],
-input[type="password"]{
-    padding: 8px;
+form a{
+    color:white;
+    font-size: 18px;
     margin-bottom: 10px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    color: white;
-    border: solid 2px #2152b3;
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    font-size: 17px;
 }
-::placeholder{
-    color: white;
-    font-size: 15px;
-}
-select{
-    padding: 5px;
+.registrar{
+    background-color: white;
+    border: none;
+    padding: 10px;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-image: linear-gradient(to right, #0f12c0 0%, #0a1a75 0%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s;
+    cursor: pointer;
+
+}
+.registrar:hover{
+    background-size: 100% 100%;
     color: white;
-    border: solid 2px #2152b3;
-    border-radius: 10px;
+}
+@media (max-width:1920px){
+    form input[type="text"],
+    input[type="password"]{
+        font-size: 20px;
+        height: 30%;
+    }
+    section h1{
+        font-size: 40px;
+    }
+    form label{
+        font-size: 25px;
+    }
+    input[type="submit"] {
+        font-size: 30px;
+    }
+    form a{
+        font-size: 25px;
+    }
+    header img{
+        max-width: 75%;
+        max-height: 120px;
+    }
+    .registrar{
+        font-size: 35px;
+    }
+
+
+}
+@media (max-width:1440px){
+    form input[type="text"],
+    input[type="password"]{
+        font-size: 15px;
+        height: 25%;
+    }
+    section h1{
+        font-size: 30px;
+    }
+    form label{
+        font-size: 20px;
+    }
+    input[type="submit"] {
+        font-size: 25px;
+    }
+    form a{
+        font-size: 20px;
+    }
+    header img{
+        max-width: 75%;
+        max-height: 120px;
+    }
+    .registrar{
+        font-size: 30px;
+    }
+
+
+}
+@media (max-width:1280px){
+    form input[type="text"],
+    input[type="password"]{
+        font-size: 10px;
+        height: 20%;
+    }
+    section h1{
+        font-size: 25px;
+    }
+    form label{
+        font-size: 15px;
+    }
+    input[type="submit"] {
+        font-size: 20px;
+    }
+    form a{
+        font-size: 15px;
+    }
+    header img{
+        max-width: 75%;
+        max-height: 120px;
+    }
+    .registrar{
+        font-size: 20px;
+    }
+
+
+}
+@media (max-width:425px){
+form input[type="text"],
+    input[type="password"]{
+        font-size: 10px;
+        height: 20%;
+    }
+    section h1{
+        font-size: 25px;
+    }
+    form label{
+        font-size: 15px;
+    }
+    input[type="submit"] {
+        font-size: 20px;
+    }
+    form a{
+        font-size: 15px;
+    }
+    header img{
+        max-width: 65%;
+        max-height: 120px;
+    }
+    .registrar{
+        font-size: 20px;
+        padding: 5px;
+    }
+    .login{
+        width: 100%;
+        margin-top: 15%;
+    }
 }
