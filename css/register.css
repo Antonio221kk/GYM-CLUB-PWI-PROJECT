@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: #13274F;
+    font-family: 'Quicksand', sans-serif;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    
+    font-size: 12px;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    
+}
+header img {
+    max-width: 65%;
+    max-height: 120px;
+
+}
+.planos{
+    margin-right: 2%;
+
+}
+.div-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    display: block;
+    width: 50%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.box h3 {
+    text-align: center;
+    color: white;
+}
+
+.box img {
+    margin: 15px;
+}
+
+.box h3 {
+    color: white;
+    padding: 5px;
+}
+
+.box p {
+    color: white;
+    margin-top: 10px;
+}
+.planos li {
+    color: white;
+    align-items: center;
+
+}
+
+.planos li::before {
+    content: "\2022";
+    font-size: 20px;
+    color: white;
+    padding-right: 5%;
+}
+
+.planos h1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    font-size: 40px;
+    color: white;
+
+}
+.div-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btnValue {
+    background-color: red;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 25%;
+    flex-direction: column;
+}
+.cadastro-h1{
+    align-items: center;
+    margin-bottom: 5%;
+    font-size: 20px;
+    color: white;
+}
+aside{
+    display: block;
+    flex: 20%;
+    margin-top: 0.3%;
+    
+}
+
+.centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cadastro-h1{
+    display: flex;
+    align-items: center;
+   
+}
+.register{
+
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    width: 50%
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+form input[type="text"],
+input[type="password"]{
+    height: 36px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 50%;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    border: solid 2px;
+}
+.gender{
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 50%;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: #757575;
+    border: solid 2px white;
+}
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    cursor: pointer;
+}
+option{
+    color: white;
+}
+form label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    
+}
+input[type="submit"] {
+    
+    padding: 7px;
+    margin-bottom: 10px;
+    width: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #0f12c0 0%, #0a1a75 0%);
+    border:solid 3px transparent;
+    color: white;
+    border-radius: 10px;
+}
+form a{
+    color:white;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    font-size: 17px;
+}

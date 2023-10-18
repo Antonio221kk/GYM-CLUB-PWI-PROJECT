@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header id="header">
+    <header id="header-top">
 
         <div class="img-header">
             <img src="css/imagens/logoIndex.png" alt="Gym Club">
@@ -20,7 +20,8 @@
         <div class="div-btn">
            <button class="btnMobile" aria-expanded="false" aria-label="Abrir Menu" aria-controls=".menu" aria-haspopup="true"><img src="css/imagens/menu.png" alt="Menu" id="menuImage"></button>
             <div class="menu">
-            <a href="#header" class="btnHome" >Home</a>
+                <!-- Retirei botão home (não há necessidade 18/10/2023) -->
+            <!-- <a href="#header-top" class="btnHome" >Home</a> -->
             <a href="#h1-treinos" class="btnDiv">Planejamento</a>
             <a href="#h1-planos" class="btnDiv">Planos</a>
             <a href="#IMC" class="btnDiv">IMC</a>
@@ -78,10 +79,6 @@
         <h3>Nutrição</h3>
         <p>Saiba como se alimentar! Entre em contato com nossos nutricionistas!</p>
         <button class="btnNutri" onclick="btnNutri()"><i class="fa-solid fa-arrow-right"></i></button>
-        <!-- <dialog>
-            <button onclick="closeDialog()">|-X-|</button>
-            <img class="QRCode">
-        </dialog> -->
        </div>
     </div>
     <div class="aviso"><span>Atenção! Oferecemos somente treinos de adaptação</span>
@@ -109,7 +106,7 @@
             <li>Falta de consistencia</li>
         </ul>
         <div class="div-value">
-        <button class="btnValue" onclick="transfer()">R$20.00</button>
+        <button class="btnValue" >R$20.00</button>
         </div>
        </div>
        <div class="box">
@@ -124,7 +121,7 @@
             <li>Benefícios</li>
         </ul>
         <div class="div-value">
-        <button class="btnValue" onclick="transfer()">R$80.00</button>
+        <button class="btnValue" >R$80.00</button>
         </div>
        </div>
         <div class="box">
@@ -139,7 +136,7 @@
             <li>Compromisso 100%</li>
         </ul>
         <div class="div-value">
-        <button class="btnValue" onclick="transfer()">R$900.00</button>
+        <button class="btnValue">R$900.00</button>
         </div>
         
        </div>
@@ -177,10 +174,6 @@
         <p>GYM CLUB 2023 <i class="fa-regular fa-registered" style="color: #ffffff; font-size: 20px; padding: 0;"></i></p>
       </footer>
   
-   
-<div class="div-back">
-   <a href="#header"><i class="fa-solid fa-arrow-up-from-bracket" style="color: #ffffff;"></i></a>
-</div>
 </body>
 
 </html>

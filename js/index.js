@@ -2,12 +2,10 @@ const btnMobile = document.querySelector(".btnMobile");
 // imagem é a bar do menu mobile
 const imagem = document.querySelector('#menuImage');
 btnMobile.addEventListener('click',menuMobile)
-btnMobile.addEventListener('touchstart',menuMobile)
+
 
 function menuMobile(event){
-    if(event.type === 'touchstart') {
-    event.preventDefaut();
-}
+    
     const divBtn = document.querySelector(".div-btn");
     divBtn.classList.toggle('active');
     const active = divBtn.classList.contains('active');

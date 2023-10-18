@@ -65,8 +65,8 @@ header img {
     margin-right: 40px;
 
 }
-
-.btnHome {
+/* Retirei botão home (não há necessidade 18/10/2023) */
+/* .btnHome {
     background-color: transparent;
     padding: 5px;
     color: #a5daff;
@@ -74,7 +74,7 @@ header img {
     border: transparent;
     font-family: 'Quicksand', sans-serif;
     margin-right: 40px;
-}
+} */
 
 .btnCadastro {
     background-color: white;
@@ -308,17 +308,7 @@ header img {
 
 }
 
-.div-back i {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px;
-    position: fixed;
-    background-color: black;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 20px;
-}
+
 
 .IMC {
 

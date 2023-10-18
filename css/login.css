@@ -35,17 +35,11 @@ section {
     display: flex;
     
 }
+
 section h1{
     text-align: center;
     padding: 5px;
     font-size: 30px;
-}
-
-.icons i{
-    text-align: center;
-    margin-top: 2%;
-    font-size: 40px;
-    padding: 5px;
 }
 
 .login{
