@@ -28,15 +28,15 @@
                 <form>
                     <input type="text" name="cpf" pattern="\d{3}\d{3}\d{3}\d{2}" placeholder="CPF">
                     <input type="text" name="name" placeholder="NOME COMPLETO">
+                    <input type="email" name="email" placeholder="EMAIL">
                     <input type="password" class="senha" id="senha" placeholder="SENHA">
                     <select class="gender">
                         <option disabled selected>GÊNERO</option>
-                        <option value="male">Masculino</option>
-                        <option value="female">Feminino</option>
-                        <option value="another">Outro</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
 
                     </select>
-                    <input type="submit" value="ENTRAR">
+                    <input type="submit" value="Entrar">
                 </form>
             </div>
         </section>

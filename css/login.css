@@ -57,7 +57,7 @@ form{
     flex-direction: column;
     align-items: center;
 }
-form input[type="text"],
+form input[type="email"],
 input[type="password"]{
     height: 36px;
     padding: 10px;

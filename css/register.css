@@ -149,7 +149,8 @@ form{
     margin-top: 10px;
 }
 form input[type="text"],
-input[type="password"]{
+input[type="password"],
+input[type="email"]{
     height: 36px;
     padding: 10px;
     margin-bottom: 20px;
