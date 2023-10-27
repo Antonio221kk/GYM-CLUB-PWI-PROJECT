@@ -20,8 +20,6 @@
         <div class="div-btn">
            <button class="btnMobile" aria-expanded="false" aria-label="Abrir Menu" aria-controls=".menu" aria-haspopup="true"><img src="css/imagens/menu.png" alt="Menu" id="menuImage"></button>
             <div class="menu">
-                <!-- Retirei botão home (não há necessidade 18/10/2023) -->
-            <!-- <a href="#header-top" class="btnHome" >Home</a> -->
             <a href="#h1-treinos" class="btnDiv">Planejamento</a>
             <a href="#h1-planos" class="btnDiv">Planos</a>
             <a href="#IMC" class="btnDiv">IMC</a>

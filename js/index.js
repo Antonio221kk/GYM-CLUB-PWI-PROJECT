@@ -26,7 +26,7 @@ function menuMobile(event){
 
 
 function transfer(){
-    window.location.href = "login.html"
+    window.location.href = "login.php"
 }
 
 

@@ -17,7 +17,7 @@
             <img src="css/imagens/logoIndex.png" alt="Gym Club">
         </div>
 
-        <button class="registrar">Primeiro acesso</button>
+        <button class="registrar" onclick="transfer()">Primeiro acesso</button>
     </header>
     <section>
         <div class="login">
@@ -25,12 +25,12 @@
                 <h1>Acesse o Espaço do Cliente</h1>
             </div>
             <form>
-                <label for="email">EMAIL:</label>
+                <label for="cpf">EMAIL:</label>
                 <input type="email" name="email" placeholder="EMAIL">
                 <label for="password">SENHA:</label>
                 <input type="password" class="senha" id="senha" placeholder="SENHA">
                 <a href="#"><p>Esqueci minha senha</p></a>
-                <input type="submit" value="ENTRAR">
+                <input type="submit" value="Entrar">
             </form>
         </div>
     </section>
