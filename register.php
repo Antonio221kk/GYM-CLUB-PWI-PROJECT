@@ -26,18 +26,17 @@
             <div class="register">
 
 
-                <form>
+                <form id="form-register">
                     <input type="text" name="name" placeholder="NOME COMPLETO">
                     <input type="email" name="email" placeholder="EMAIL">
-                    <input type="password" class="senha" id="senha" placeholder="SENHA">
-                    <select class="gender">
+                    <input type="text" name="password" id="senha" placeholder="SENHA">
+                    <select class="gender" name="select">
                         <option disabled selected>GÊNERO</option>
-                        <option value="male">Masculino</option>
-                        <option value="female">Feminino</option>
-                        <option value="another">Outro</option>
-
+                        <option value="m" >Masculino</option>
+                        <option value="f">Feminino</option>
                     </select>
                     <input type="submit" value="Cadastrar">
+                    <div id="message"></div>
                 </form>
             </div>
         </section>

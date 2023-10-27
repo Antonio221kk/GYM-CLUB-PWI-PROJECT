@@ -2,7 +2,7 @@ const formRegistro = document.querySelector("#form-register");
 
 formRegistro.addEventListener('submit',(event) =>{
     event.preventDefault();
-    const url = "api/user-insert.php";
+    const url = "api/users-insert.php";
     const options = {
         method: "POST",
         body: new FormData(formRegistro)
@@ -12,8 +12,8 @@ formRegistro.addEventListener('submit',(event) =>{
         response.json().then((user)=>{
             console.log(user)
             if(user.type === "error"){
-                document.querySelector("#message").textContent = `user.message`;
+                document.querySelector("#message").innerHTML = `${user.message}`;
             }
-        })
-    })
-})
+        });
+    });
+});
