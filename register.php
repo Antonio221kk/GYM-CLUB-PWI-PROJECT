@@ -29,7 +29,7 @@
                 <form id="form-register">
                     <input type="text" name="name" placeholder="NOME COMPLETO">
                     <input type="email" name="email" placeholder="EMAIL">
-                    <input type="text" name="password" id="senha" placeholder="SENHA">
+                    <input type="password" name="password" id="senha" placeholder="SENHA">
                     <select class="gender" name="select">
                         <option disabled selected>GÊNERO</option>
                         <option value="m" >Masculino</option>

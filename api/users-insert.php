@@ -1,4 +1,5 @@
 <?php
+// header("content-type: application/json");
 
 require "connection.php";
 
