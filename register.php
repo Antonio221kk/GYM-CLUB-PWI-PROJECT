@@ -27,14 +27,9 @@
 
 
                 <form id="form-register">
-                    <input type="text" name="name" placeholder="NOME COMPLETO">
-                    <input type="email" name="email" placeholder="EMAIL">
-                    <input type="password" name="password" id="senha" placeholder="SENHA">
-                    <select class="gender" name="select">
-                        <option disabled selected>GÊNERO</option>
-                        <option value="m" >Masculino</option>
-                        <option value="f">Feminino</option>
-                    </select>
+                    <input type="text" name="name" placeholder="Nome Completo">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" id="password" placeholder="Senha">
                     <input type="submit" value="Cadastrar">
                     <div id="message"></div>
                 </form>
