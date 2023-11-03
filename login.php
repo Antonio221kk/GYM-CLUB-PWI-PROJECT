@@ -31,7 +31,7 @@
                 <input type="password" class="senha" id="senha" placeholder="SENHA">
                 <a href="#"><p>Esqueci minha senha</p></a>
                 <div id="message"></div>
-                <input type="submit" value="Entrar">
+                <input type="submit" value="Entrar" >
             </form>
         </div>
     </section>
