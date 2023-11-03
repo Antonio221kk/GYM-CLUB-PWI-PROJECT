@@ -2,25 +2,18 @@
 require "connection.php";
 
 $user = filter_input_array(INPUT_POST);
-$selectedPlan = filter_input(INPUT_POST, "selectedPlan");
 
-if (in_array("", $user) || empty($selectedPlan)) {
+
+if (in_array("", $user)) {
     $response = [
         "type" => "error",
         "message" => "Preencha todos os campos e selecione um plano"
     ];
     echo json_encode($response);
     exit;
-} else {
-    $response = [
-        "type" => "success",
-        "message" => "Usuário Cadastrado com sucesso"
-    ];
-    echo json_encode($response);
-    exit;
-}
+} 
 
-if(filter_var($user["email"],FILTER_VALIDATE_EMAIL)){
+if(!filter_var($user["email"],FILTER_VALIDATE_EMAIL)){
     $response = [
         "type" => "error",
         "message" => "Email Invalido!"
@@ -42,13 +35,15 @@ if($stmt->rowCount() == 1){
     exit;
 }
 
-$query = "INSERT INTO users VALUES (:name, :email, :password, :planId)";
+//$query = "INSERT INTO users  VALUES (NULL, :name, :email, :password, :planId)";
+$query = "INSERT INTO users (id, name, email, password, planId, fk_coments) VALUES (NULL, :name, :email, :password, :planId, NULL)";
+//echo $query;
 $stmt = $conn->prepare($query);
 $stmt->bindParam("name", $user["name"]);
 $stmt->bindParam("email",$user["email"]);
 $password = password_hash($user["password"],PASSWORD_DEFAULT);
 $stmt->bindParam("password",$password);
-$stmt->bindParam("planId",$selectedPlan);
+$stmt->bindParam("planId",$user["planId"]);
 $stmt->execute();
 
 if($stmt->rowCount() != 1){
@@ -64,5 +59,4 @@ $response = [
     "type" => "success",
     "message" => "Usuário cadastrado com sucesso!"
 ];
-
 echo json_encode($response);

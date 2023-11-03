@@ -1,9 +1,9 @@
 <?php
 
-$host = "127.0.0.1";
+$host = "localhost";
 $user = "root";
 $password = "";
-$database = "";
+$database = "gymclub";
 $port = 3306;
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

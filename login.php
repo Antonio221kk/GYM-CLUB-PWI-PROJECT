@@ -24,12 +24,13 @@
             <div class="login-h1">
                 <h1>Acesse o Espaço do Cliente</h1>
             </div>
-            <form>
+            <form id="form-login">
                 <label for="cpf">EMAIL:</label>
                 <input type="email" name="email" placeholder="EMAIL">
                 <label for="password">SENHA:</label>
                 <input type="password" class="senha" id="senha" placeholder="SENHA">
                 <a href="#"><p>Esqueci minha senha</p></a>
+                <div id="message"></div>
                 <input type="submit" value="Entrar">
             </form>
         </div>
