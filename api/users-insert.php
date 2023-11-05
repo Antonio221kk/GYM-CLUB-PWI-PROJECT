@@ -1,10 +1,11 @@
 <?php
+global $conn;
 require "connection.php";
 
 $user = filter_input_array(INPUT_POST);
 
 
-if (in_array("", $user)) {
+if(in_array("", $user)) {
     $response = [
         "type" => "error",
         "message" => "Preencha todos os campos e selecione um plano"
@@ -35,9 +36,8 @@ if($stmt->rowCount() == 1){
     exit;
 }
 
-//$query = "INSERT INTO users  VALUES (NULL, :name, :email, :password, :planId)";
+
 $query = "INSERT INTO users (id, name, email, password, planId, fk_coments) VALUES (NULL, :name, :email, :password, :planId, NULL)";
-//echo $query;
 $stmt = $conn->prepare($query);
 $stmt->bindParam("name", $user["name"]);
 $stmt->bindParam("email",$user["email"]);
@@ -46,7 +46,7 @@ $stmt->bindParam("password",$password);
 $stmt->bindParam("planId",$user["planId"]);
 $stmt->execute();
 
-if($stmt->rowCount() != 1){
+if($stmt->rowCount() !== 1){
     $response = [
         "type" => "error",
         "message" => "Usuário não cadastrado!"

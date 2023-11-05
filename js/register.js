@@ -1,12 +1,11 @@
-const form = document.querySelector("#form-register");
+const formRegister = document.querySelector("#form-register");
 
-form.addEventListener("submit", (event) => {
+formRegister.addEventListener("submit", (event) => {
     event.preventDefault();
     const url = "api/users-insert.php";
-    
     const options = {
         method: "POST",
-        body: new FormData(form)
+        body: new FormData(formRegister)
     };
 
     fetch(url, options).then((response) => {

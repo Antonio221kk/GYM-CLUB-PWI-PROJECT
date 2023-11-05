@@ -30,6 +30,7 @@
                     <input type="password" name="password" id="password" placeholder="Senha">
                     <input type="submit" value="Cadastrar">
                     <div id="message"></div>
+                
             </div>
         </section>
 
