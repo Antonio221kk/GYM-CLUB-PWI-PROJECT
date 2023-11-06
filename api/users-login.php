@@ -27,7 +27,6 @@ if(!filter_var($user["email"],FILTER_VALIDATE_EMAIL)){
 }
 
 $query = "SELECT * FROM users WHERE email = :email";
-
 $stmt = $conn->prepare($query);
 $stmt->bindParam("email",$user["email"]);
 $stmt->execute();
