@@ -20,14 +20,13 @@
         <form class="avaliar">
             <h1 class="h1-geral">Avalie nosso site!</h1>
 
-            <textarea id="textarea" cols="30" rows="10" placeholder="Digite sua opinião" maxlength="350"></textarea>
+            <textarea type="textarea" name="textarea" id="textarea" cols="30" rows="10"  maxlength="350"></textarea>
 
             <h2>Nota de 0 a 10</h2>
-            <input type="number" id="nota" class="nota" min="0" max="10" placeholder="1 a 10">
+            <input type="number" name="grade" id="grade" class="grade" min="0" max="10" placeholder="1 a 10">
             <input type="submit" class="btnEnviar">
-            </form>
+        </form>
     </section>
-
 
     <section id="sectionContent">
         <h1 class="h1-geral" id="h1Avaible">Algumas avaliações abaixo:</h1>

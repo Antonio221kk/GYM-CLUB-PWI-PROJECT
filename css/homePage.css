@@ -96,9 +96,12 @@ header {
 }
 
 section {
+    display: flex;
     width: 100%;
     text-align: center;
     padding: 40px;
+    justify-content: space-between;
+    
 }
 
 h2 {
@@ -121,49 +124,48 @@ footer i {
 
 }
 
-.org-box {
+.p-treino{
+    font-size: 20px ;
+}
+.box {
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    width: 50%; /* Largura da caixa à esquerda */
+    padding: 20px;
     justify-content: center;
-    align-items: center;
-    width: 100%;
+    margin-right: 2%;
+    flex-direction: column;
     border-radius: 10px;
-
 }
-
-.h2-geral {
+.box-text{
+    display: flex;
+    align-items:center;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
     color: white;
-    padding: 10px;
-    border: solid;
-}
-
-.img-sec {
-    max-width: 50%;
-    max-height: 50%;
-
-}
-
-.parag-box {
     font-size: 20px;
-    padding: 10px;
+    border-radius: 10px;
 }
 
-.box {
-    background-color: rgba(0, 0, 0, 0.8);
+.btn-treino {
+    color:#FFF;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #0f12c0 0%, #0a1a75 0%);
+    background-repeat: no-repeat;
+    transition: background-size 0.5s;
+    background-size: 0% 100%;
+    background-color: black;
+    
+}
+.btn-treino:hover{
+    background-size: 100% 100%; 
     color: white;
-    width: 30%;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-.img-box {
-    width: 30%;
 
 }
+
+
 
 .btnShowers {
     display: flex;
@@ -176,88 +178,6 @@ footer i {
 
 }
 
-.btnFeedback {
-    display: flex;
-    padding: 5px;
-    border-style: double;
-    border-radius: 10px;
-    background-color: transparent;
-    color: black;
-    border-color: black;
-
-}
-
-#saudacao {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    background-color: 10px;
-    padding: 10px;
-    display: flex;
-    border-radius: 10px;
-    color: white;
-    padding: 10px;
-    border: solid;
-    justify-content: center;
-    text-align: center;
-    margin-top: 3%;
-
-}
-
-.btnShowers:hover {
-    padding: 5px;
-    border-style: double;
-    border-radius: 10px;
-    background-color: transparent;
-    color: gray;
-    border-color: gray;
-    transition: all .50s ease;
-}
-
-
-dialog {
-    padding: 10px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-    border: double white;
-    border-radius: .5rem;
-    background-color: #0C2340;
-    width: 50%;
-    color: white;
-}
-
-
-
-.closeMachines {
-    background-color: #173a66;
-    color: white;
-    padding: 10px;
-    border: solid 2px;
-
-    border-radius: 10px;
-    margin: 10px;
-    font-size: 15px;
-}
-
-.btnAvaible {
-
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: linear-gradient(to right, #070579, #070707);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: bold;
-}
 
 /*Media Query */
 
