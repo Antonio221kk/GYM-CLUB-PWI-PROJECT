@@ -152,20 +152,51 @@ footer i {
     border-radius: 5px;
     margin: 10px;
     cursor: pointer;
-    background-image: linear-gradient(to right, #0f12c0 0%, #0a1a75 0%);
-    background-repeat: no-repeat;
-    transition: background-size 0.5s;
-    background-size: 0% 100%;
-    background-color: black;
+    background-color:  #0b0eb1;
     
 }
-.btn-treino:hover{
-    background-size: 100% 100%; 
-    color: white;
 
+
+/* LOJA GYMCLUB ...  */
+
+.loja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.h1-loja{
+    font-size: 20;
+    
+}
+.product-box {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
 }
 
+.product-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
 
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
 .btnShowers {
     display: flex;
@@ -177,6 +208,8 @@ footer i {
     border-color: white;
 
 }
+
+
 
 
 /*Media Query */
