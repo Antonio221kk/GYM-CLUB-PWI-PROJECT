@@ -18,10 +18,12 @@
       <div class="frase">
           <h1 class="frase-h1">Qual sua meta?</h1>
       </div>
+      <div class="account"><i class="fa-regular fa-circle-user" style="color: #ffffff;" onclick="openAccount()"></i></div>
       <div class="nav-right">
+        
         <nav class="menu-lateral">
           <div class="btn-expandir">
-            <i class="bi bi-list"></i>
+            <i class="bi bi-list" id="bar-i"></i>
           </div>
         </nav>
           
@@ -48,7 +50,15 @@
           
       </div>
   </header>
- 
+  <div class="div-account">
+  <dialog id="account-modal" class="account-modal">
+  <i class="fa-solid fa-x" style="color: #000000;" onclick="closeAccount()"></i>
+
+    <h1>teste de modal</h1>
+
+    <p>informações do usuario</p>
+  </dialog>
+  </div>
   <section class="org">
 
   <div class="box">
@@ -59,7 +69,7 @@
   <div class="box-text">
     <p class="p-treino">Desenvolvemos um treino inicial abrangente para novos alunos. 
       Para uma experiência ainda mais especial e individualizada, 
-      consulte-nos para personalizar seu treinamento.
+      consulte um personal de sua confiança.
     </p>
   </div>
   
