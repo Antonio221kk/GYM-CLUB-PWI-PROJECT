@@ -20,46 +20,26 @@
     <div class="frase">
       <h1 class="frase-h1">Qual sua meta?</h1>
     </div>
-    <div class="account"><i class="fa-regular fa-circle-user" style="color: #ffffff;" onclick="openAccount()"></i></div>
+    <div class="cart-shopping">
+    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;" ></i></i>
+    </div>
+    <div class="account"><i class="fa-regular fa-circle-user" id="openModalBtn" style="color: #ffffff;" ></i>
+    </div>
     <div class="nav-right">
-
-      <nav class="menu-lateral">
-        <div class="btn-expandir">
-          <i class="bi bi-list" id="bar-i"></i>
-        </div>
-      </nav>
-
-      <ul>
-        <li class="item-menu">
-          <a href="#">
-            <span class="icon"></span>
-            <span class="txt-link"></span>
-          </a>
-        </li>
-        <li class="item-menu">
-          <a href="#">
-            <span class="icon"></span>
-            <span class="txt-link"></span>
-          </a>
-        </li>
-        <li class="item-menu">
-          <a href="#">
-            <span class="icon"></span>
-            <span class="txt-link"></span>
-          </a>
-        </li>
-      </ul>
-
+    <i class="fa-solid fa-bars" style="color: #ffffff;" ></i>
     </div>
   </header>
-  <div class="div-account">
-    <dialog id="account-modal" class="account-modal">
-      <i class="fa-solid fa-x" style="color: #000000;" onclick="closeAccount()"></i>
-
-      <h1>teste de modal</h1>
-
-      <p>informações do usuario</p>
-    </dialog>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close" id="closeModalBtn">&times;</span>
+          <div class="profile-tab">
+              <h2>Usuário Gym Club</h2>
+              <img src="avatar.jpg" alt="Imagem do Perfil">
+              <p><strong>Nome:</strong> John Doe</p>
+              <p><strong>Email:</strong> john.doe@example.com</p>
+              <button id="logout">Sair</button>
+          </div>
+      </div>
   </div>
   <section class="org">
 
@@ -77,26 +57,30 @@
   </section>
 
   <section class="loja">
-
-  <h1 class="h1-loja">Loja Gym Club</h1>
-
-  <div class="container">
-
-    <div class="product-box">
-      <img src="product1.jpg" alt="Produto 1">
-      <h3>Camiseta Estilosa</h3>
-      <p>R$ 50,00</p>
-      <button class="add-to-cart-btn" data-id="1" data-name="Camiseta Estilosa" data-price="50.00">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="product-box">
-      <img src="product1.jpg" alt="Produto 1">
-      <h3>Camiseta Estilosa</h3>
-      <p>R$ 50,00</p>
-      <button class="add-to-cart-btn" data-id="1" data-name="Camiseta Estilosa" data-price="50.00">Adicionar ao Carrinho</button>
-    </div>
+  <div class="h1-loja">
+    <h1 >Loja Gym Club</h1>
   </div>
-</section>
+  <div class="search-products">
+    <input type="text" placeholder="Pesquisar produto..." name="pesquisarProdutos" id="pesquisar">
+  </div>
+    <div class="container">
+
+      <div class="product-box">
+        <img src="product1.jpg" alt="Produto 1">
+        <h3>Camiseta Estilosa</h3>
+        <p>R$ 50,00</p>
+        <button class="add-to-cart-btn" data-id="1" data-name="Camiseta Estilosa" data-price="50.00">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="product-box">
+        <img src="product1.jpg" alt="Produto 1">
+        <h3>Camiseta Estilosa</h3>
+        <p>R$ 50,00</p>
+        <button class="add-to-cart-btn" data-id="1" data-name="Camiseta Estilosa" data-price="50.00">Adicionar ao Carrinho</button>
+      </div>
+      
+    </div>
+  </section>
 
   <footer>
 

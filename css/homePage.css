@@ -38,6 +38,11 @@ header {
     padding: 20px;
 
 }
+header i{
+    cursor: pointer;
+    font-size: 35px;
+    margin: 15px;
+}
 
 .logo-img {
     max-width: 100%;
@@ -60,40 +65,57 @@ header {
     border-color: #173a66;
 }
 
-.carrinho {
-    text-align: left;
-    position: relative;
-    display: inline-block;
-}
-
-.carrinho-conteudo {
+/* Usuario */
+.modal {
     display: none;
     position: fixed;
-    background-color: #fff;
-    padding: 20px;
     z-index: 1;
-    right: 0;
-    width: 40%;
-    max-height: 50%;
-    overflow-y: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
     color: black;
 }
 
-.carrinho-conteudo.aberto {
-    display: block;
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.btnCarrinho {
-    margin: 0 15px;
-    background-color: transparent;
-    color: white;
-    border: none;
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.btnCarrinho i {
-    font-size: 30px;
+.profile-tab {
+    text-align: center;
 }
+
+.profile-tab img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.profile-tab p {
+    margin: 5px;
+}
+/* FIm do usuario */
 
 section {
     display: flex;
@@ -159,21 +181,38 @@ footer i {
 
 /* LOJA GYMCLUB ...  */
 
+.search-products{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 30%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.search-products input[type="text"]{
+    width: 100%;
+    background-color: transparent;
+    border: solid white 2px;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    
+}
 .loja{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    
     
 }
 .container{
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
     
 }
 .h1-loja{
-    font-size: 20;
-    
+    font-size: 20px;
+
 }
 .product-box {
     width: 300px;
@@ -198,16 +237,7 @@ footer i {
     border-radius: 5px;
 }
 
-.btnShowers {
-    display: flex;
-    padding: 5px;
-    border-style: double;
-    border-radius: 10px;
-    background-color: transparent;
-    color: white;
-    border-color: white;
 
-}
 
 
 
