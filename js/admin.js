@@ -51,17 +51,45 @@ formAdmin.addEventListener("submit", (event) => {
                             const sectionAdmin = document.querySelector("#section-admin").innerHTML = 
                         `<form id="formRegister">
                         <label for="emailAdmin">Email do Admin:</label>
+
                         <input type="email" name="email_admin" placeholder="Email">
-                        <label for="passwordAdmin">Email do Admin:</label>
+                        <label for="passwordAdmin">Senha do Admin:</label>
+
                         <input type="password" name="password_admin" id="password" placeholder="Password">
+
+                        <div id="message"></div>
+                        
                         <input type="submit" value="Cadastrar Admin">
                         </form>
                         
                         ` ;   
-                         
+                        const formRegister = document.querySelector("#formRegister");
+                        formRegister.addEventListener("submit",(event)=>{
+                            event.preventDefault();
 
-                          
+                            const url = "api/insert-admin.php";
+                            const options = {
+                            method: "POST",
+                            body: new FormData(formRegister)
+                        }
+
+                        fetch(url,options).then((response)=>{
+                            response.json().then((admin)=>{
+                                if(admin.type === "success"){
+                                    document.querySelector("#message").innerHTML = admin.message
+                                }
+                               else{
+                                document.querySelector("#message").innerHTML = admin.message
+                               }
+                            });
+                        })
+
+
                         });
+                         
+                        });
+
+                        
 
 
                       const formProducts =  document.querySelector("#formProducts");

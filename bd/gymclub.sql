@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2023 at 10:15 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Nov 16, 2023 at 01:44 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `email_admin`, `password_admin`) VALUES
-(1, 'gymadmin@gmail.com', 'admin2023');
+(2, 'antonioadm@gmail.com', '$2y$10$sh0Op.75ynd0txwmKZeKJO3K9zfmG9O4tBtY2.4goue0TgbZI1FA2');
 
 -- --------------------------------------------------------
 
@@ -48,8 +48,29 @@ INSERT INTO `admin` (`id_admin`, `email_admin`, `password_admin`) VALUES
 
 CREATE TABLE `coments` (
   `id_coment` int(11) NOT NULL,
-  `coment` varchar(350) NOT NULL
+  `coment` varchar(350) NOT NULL,
+  `grade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id_product` int(11) NOT NULL,
+  `name_product` varchar(255) NOT NULL,
+  `price_product` float NOT NULL,
+  `url_product` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id_product`, `name_product`, `price_product`, `url_product`) VALUES
+(5, 'creatina', 112, 'https://lojamaxtitanium.vtexassets.com/assets/vtex/assets-builder/lojamaxtitanium.theme/1.4.74-beta.0/placeholders/rewards4___cd75d53de3ba95a993c53a815391990e.png');
 
 -- --------------------------------------------------------
 
@@ -71,7 +92,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `planId`, `fk_coments`) VALUES
-(13, 'Antônio', 'canalantoniomartins@gmail.com', '$2y$10$L9QWKx6NoeuAFQ7QUwAOpORwFNIBupvFqhJ1T8zQTI6koNzUSyVVS', 20, NULL);
+(13, 'Antônio', 'canalantoniomartins@gmail.com', '$2y$10$L9QWKx6NoeuAFQ7QUwAOpORwFNIBupvFqhJ1T8zQTI6koNzUSyVVS', 20, NULL),
+(14, 'antonio', 'elias@gmail.com', '$2y$10$UweLwknr8hIexAgxyY7v2uYGFuxU0QKvnnR1T66qOCjlPIpzk1bP2', 20, NULL),
+(15, 'antonio', 'antonio@gmail.com', '$2y$10$haqZfz5l2c3Y8JnhJkOC9.0rrV1pwzrZkt/ngW9uu7v3m8kE.acMG', 20, NULL);
 
 --
 -- Indexes for dumped tables
@@ -90,6 +113,12 @@ ALTER TABLE `coments`
   ADD PRIMARY KEY (`id_coment`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id_product`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -104,7 +133,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `coments`
@@ -113,10 +142,16 @@ ALTER TABLE `coments`
   MODIFY `id_coment` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
