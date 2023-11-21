@@ -39,12 +39,13 @@ if($stmt->rowCount() == 0){
     exit;
 }
 
-$query = "SELECT * FROM admin WHERE password_admin = :password";
-$stmt = $conn->prepare($query);
-$stmt->bindParam("password",$admin["password"]);
-$stmt->execute();
 
-if($stmt->rowCount() == 0){
+// todas as informações do usuário
+$adminDB = $stmt->fetch();
+
+var_dump($adminDB);
+
+if(!password_verify($admin["password"],$adminDB["password_admin"])){
     $response = [
         "type" => "error",
         "message" => "Senha incorreta!"
@@ -52,10 +53,6 @@ if($stmt->rowCount() == 0){
     echo json_encode($response);
     exit;
 }
-
-// todas as informações do usuário
-$adminDB = $stmt->fetch();
-
 
 
 $response = [

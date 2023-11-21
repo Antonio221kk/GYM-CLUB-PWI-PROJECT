@@ -44,6 +44,7 @@ $password = password_hash($admin["password_admin"],PASSWORD_DEFAULT);
 $stmt->bindParam("password_admin",$password);
 $stmt->execute();
 
+
 if($stmt->rowCount() !== 1){
     $response = [
         "type" => "error",

@@ -57,7 +57,7 @@ formAdmin.addEventListener("submit", (event) => {
 
                         <input type="password" name="password_admin" id="password" placeholder="Password">
 
-                        <div id="message"></div>
+                        <div id="message1"></div>
                         
                         <input type="submit" value="Cadastrar Admin">
                         </form>
@@ -74,12 +74,12 @@ formAdmin.addEventListener("submit", (event) => {
                         }
 
                         fetch(url,options).then((response)=>{
-                            response.json().then((admin)=>{
-                                if(admin.type === "success"){
-                                    document.querySelector("#message").innerHTML = admin.message
+                            response.json().then((result)=>{
+                                if(result.type === "success"){
+                                    document.querySelector("#message1").innerHTML = result.message
                                 }
                                else{
-                                document.querySelector("#message").innerHTML = admin.message
+                                document.querySelector("#message1").innerHTML = result.message
                                }
                             });
                         })
