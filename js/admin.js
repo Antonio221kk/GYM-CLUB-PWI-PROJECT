@@ -14,14 +14,14 @@ formAdmin.addEventListener("submit", (event) => {
     fetch(url, options).then((response) => {
         response.json().then((admin) => {
             if (admin.type === "error") {
-                document.querySelector("#message").innerHTML = admin.message;
+                document.querySelector("#message-admin").innerHTML = admin;
 
             }
             else {
                 let secondsLeft = 2; // Defina o número de segundos desejados
-                const messageElement = document.querySelector("#message");
+                const messageAdmin = document.querySelector("#message-admin");
                 function updateMessage() {
-                    messageElement.innerHTML = admin.message + " Privilégios em " + secondsLeft + " segundos...";
+                    messageAdmin.innerHTML = admin + " Privilégios em " + secondsLeft + " segundos...";
                 }
                 const intervalId = setInterval(() => {
                     secondsLeft--;
@@ -88,9 +88,6 @@ formAdmin.addEventListener("submit", (event) => {
                         });
                          
                         });
-
-                        
-
 
                       const formProducts =  document.querySelector("#formProducts");
                       formProducts.addEventListener("submit",(event)=>{

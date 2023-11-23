@@ -20,7 +20,7 @@
                 <input type="email" name="email" placeholder="EMAIL">
                 <label for="password">SENHA:</label>
                 <input type="password" class="senha" name="password" id="senha" placeholder="SENHA">
-                <div id="message"></div>
+                <div id="message-admin"></div>
                 <input type="submit" value="Entrar">
             </form>
         </div>
