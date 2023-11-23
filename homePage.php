@@ -65,20 +65,6 @@
   </div>
     <div class="container">
 
-      <div class="product-box">
-        <img src="product1.jpg" alt="Produto 1">
-        <h3>Camiseta Estilosa</h3>
-        <p>R$ 50,00</p>
-        <button class="add-to-cart-btn" data-id="1" data-name="Camiseta Estilosa" data-price="50.00">Adicionar ao Carrinho</button>
-      </div>
-
-      <div class="product-box">
-        <img src="product1.jpg" alt="Produto 1">
-        <h3>Camiseta Estilosa</h3>
-        <p>R$ 50,00</p>
-        <button class="add-to-cart-btn" data-id="1" data-name="Camiseta Estilosa" data-price="50.00">Adicionar ao Carrinho</button>
-      </div>
-      
     </div>
   </section>
 
