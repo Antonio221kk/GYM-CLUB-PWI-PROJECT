@@ -50,6 +50,7 @@ var_dump($adminDB);
          "type" => "error",
          "message" => "Senha incorreta!"
      ];
+     
      echo json_encode($response);
      exit;
  }
