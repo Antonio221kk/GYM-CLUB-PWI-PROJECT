@@ -29,7 +29,6 @@ html {
 
 header {
     display: flex;
-    
     justify-content: space-between;
     align-items: center;
     box-shadow: black;

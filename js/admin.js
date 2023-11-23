@@ -118,9 +118,9 @@ formAdmin.addEventListener("submit", (event) => {
                     } else {
                         updateMessage();
                     }
-                }, 1000); // A cada 1 segundo (1000 milissegundos)
+                }, 1000);
 
-                updateMessage(); // Para exibir a mensagem inicial imediatamente
+                updateMessage();
             }
         })
     })
