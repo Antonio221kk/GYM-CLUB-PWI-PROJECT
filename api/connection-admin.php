@@ -45,14 +45,14 @@ $adminDB = $stmt->fetch();
 
 var_dump($adminDB);
 
-if(!password_verify($admin["password"],$adminDB["password_admin"])){
-    $response = [
-        "type" => "error",
-        "message" => "Senha incorreta!"
-    ];
-    echo json_encode($response);
-    exit;
-}
+ if(!password_verify($admin["password"],$adminDB["password_admin"])){
+     $response = [
+         "type" => "error",
+         "message" => "Senha incorreta!"
+     ];
+     echo json_encode($response);
+     exit;
+ }
 
 
 $response = [

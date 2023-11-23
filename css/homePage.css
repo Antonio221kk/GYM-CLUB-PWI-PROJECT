@@ -215,22 +215,27 @@ footer i {
 
 }
 .product-box {
-    width: 300px;
     margin: 20px;
     padding: 10px;
     border: 1px solid #ccc;
     text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 350px;
+    height: auto;
 }
 
 .product-box img {
-    max-width: 100%;
-    height: auto;
+    max-width: 200px;
+    max-height: 200px;
     margin-bottom: 10px;
+    
 }
 
 .add-to-cart-btn {
+    margin-top: 5%;
     padding: 10px 20px;
-    background-color: #ff4500;
+    background-color: blue;
     color: #fff;
     border: none;
     cursor: pointer;
