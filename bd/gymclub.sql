@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2023 at 01:44 AM
+-- Generation Time: Nov 24, 2023 at 02:19 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -38,7 +38,9 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `email_admin`, `password_admin`) VALUES
-(2, 'antonioadm@gmail.com', '$2y$10$sh0Op.75ynd0txwmKZeKJO3K9zfmG9O4tBtY2.4goue0TgbZI1FA2');
+(2, 'antonioadm@gmail.com', 'adm'),
+(5, 'adm@adm.com', '$2y$10$JtnjInaUyOcJog2GMZd1C.WN.FigupKx4.BVf9YORzotIcw3ECJRq'),
+(6, 'jhonatan@gmail.com', '$2y$10$kWIMKzaJ02s0Len5at3cZ.vDg1RhAFjgJo0z9s/i1vCnjF3b.WH3u');
 
 -- --------------------------------------------------------
 
@@ -70,7 +72,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id_product`, `name_product`, `price_product`, `url_product`) VALUES
-(5, 'creatina', 112, 'https://lojamaxtitanium.vtexassets.com/assets/vtex/assets-builder/lojamaxtitanium.theme/1.4.74-beta.0/placeholders/rewards4___cd75d53de3ba95a993c53a815391990e.png');
+(7, 'Whey Protein', 150, 'https://lojamaxtitanium.vtexassets.com/arquivos/ids/157626-800-800?v=638351464193770000&width=800&height=800&aspect=true'),
+(8, 'Creatina', 90, 'https://lojamaxtitanium.vtexassets.com/assets/vtex.file-manager-graphql/images/6a503649-cd9f-40e4-b26e-f37071665e67___e7546e8ec27e96e1b68dfbf5017dd0b5.png'),
+(9, 'Tech T-Shirt Insider', 159, 'https://www.insiderstore.com.br/cdn/shop/files/C6-TechT-ShirtGolaUPreto6.jpg?v=1700691687&width=1206'),
+(10, 'Pasta Bueníssimo ', 64, 'https://images.tcdn.com.br/img/img_prod/1087751/pasta_de_amendoim_sabor_buenissimo_com_whey_protein_600g_117_1_a7a671e2ea505bc2ebbb4d619630e8bd.png');
 
 -- --------------------------------------------------------
 
@@ -133,7 +138,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `coments`
@@ -145,7 +150,7 @@ ALTER TABLE `coments`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users`
