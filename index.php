@@ -23,7 +23,7 @@
             <a href="#h1-treinos" class="btnDiv">Planejamento</a>
             <a href="#h1-planos" class="btnDiv">Planos</a>
             <a href="#IMC" class="btnDiv">IMC</a>
-            <button class="btnCadastro" onclick="transfer()">Seja aluno(a)</button>
+            <button class="btnCadastro" onclick="transfer()">Espaço do Cliente</button>
         </div>
         </div>
     </header>

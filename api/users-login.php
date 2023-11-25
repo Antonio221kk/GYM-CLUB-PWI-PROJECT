@@ -53,16 +53,14 @@ if(!password_verify($user["password"],$userDB["password"])){
     exit;
 }
 
-$_SESSION["user"] = $userDB;
 
-$response = [
-    "type" => "success",
-    "message" => "Login efetuado com sucesso!",
-    "user" => [
-        "id" => $userDB["id"],
-        "name" => $userDB["name"],
-        "email" => $userDB["email"]
-    ]
+$_SESSION["user"] = [
+    "name" => $userDB["name"],
+    "email" => $userDB["email"]
 ];
 
-echo json_encode($response);
+echo json_encode([
+    "type" => "success",
+    "message" => "Usuário logado com sucesso",
+    "user" => $_SESSION["user"]
+]);

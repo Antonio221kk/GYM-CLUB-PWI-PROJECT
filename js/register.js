@@ -15,7 +15,7 @@ formRegister.addEventListener("submit", (event) => {
                 document.querySelector("#message").textContent = user.message;
             }
             else {
-                let secondsLeft = 3; // Defina o número de segundos desejados
+                let secondsLeft = 2; // Defina o número de segundos desejados
                 const messageElement = document.querySelector("#message");
                 function updateMessage() {
                     messageElement.innerHTML = user.message + " Redirecionando em " + secondsLeft + " segundos...";
@@ -24,7 +24,7 @@ formRegister.addEventListener("submit", (event) => {
                     secondsLeft--;
                     if (secondsLeft <= 0) {
                         clearInterval(intervalId); // Para a contagem regressiva quando os segundos chegam a 0
-                        window.location.href = "homePage.php";
+                        window.location.href = "login.php";
                     } else {
                         updateMessage();
                     }

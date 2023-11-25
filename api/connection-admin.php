@@ -43,8 +43,6 @@ if($stmt->rowCount() == 0){
 // todas as informações do usuário
 $adminDB = $stmt->fetch();
 
-var_dump($adminDB);
-
  if(!password_verify($admin["password"],$adminDB["password_admin"])){
      $response = [
          "type" => "error",

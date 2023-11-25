@@ -31,14 +31,7 @@
   </header>
     <div id="myModal" class="modal">
       <div class="modal-content">
-          <span class="close" id="closeModalBtn">&times;</span>
-          <div class="profile-tab">
-              <h2>Usuário Gym Club</h2>
-              <img src="avatar.jpg" alt="Imagem do Perfil">
-              <p><strong>Nome:</strong> John Doe</p>
-              <p><strong>Email:</strong> john.doe@example.com</p>
-              <button id="logout">Sair</button>
-          </div>
+          <!--Conteudo que está no JS  -->
       </div>
   </div>
   <section class="org">

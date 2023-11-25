@@ -21,7 +21,7 @@ formLogin.addEventListener("submit",(event)=>{
             if (user.type == "error") {
                 document.querySelector("#message").innerHTML = user.message;
             } else {
-                let secondsLeft = 5; // Defina o número de segundos desejados
+                let secondsLeft = 2; // Defina o número de segundos desejados
                 const messageElement = document.querySelector("#message");
                 function updateMessage() {
                     messageElement.innerHTML = user.message + " Redirecionando em " + secondsLeft + " segundos...";
@@ -33,10 +33,11 @@ formLogin.addEventListener("submit",(event)=>{
                         window.location.href = "homePage.php";
                     } else {
                         updateMessage();
+                       
                     }
-                }, 1000); // A cada 1 segundo (1000 milissegundos)
+                }, 1000); 
 
-                updateMessage(); // Para exibir a mensagem inicial imediatamente
+                updateMessage(); 
             }
         });
     });
