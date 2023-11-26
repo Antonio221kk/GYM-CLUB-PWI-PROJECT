@@ -13,10 +13,10 @@ formAvaliar.addEventListener("submit",(event)=>{
     fetch(url,options).then((response)=>{
         response.json().then((comment)=>{
             if(comment.type === "success"){
-                console.log(comment.type)
+                document.querySelector(".message").innerHTML = comment.message
             }
             if(comment.type === "error"){
-                console.log(comment.type)
+                document.querySelector(".message").innerHTML = comment.message
             }
         });
     })

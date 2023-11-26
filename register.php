@@ -18,11 +18,11 @@
         </div>
     </header>
    
-
+<div class="container">
     <form id="form-register">
         <section class="cadastro">
             <div class="cadastro-h1">
-                <h1>Vamos criar seu cadastro na Gym Club</h1>
+                <h1>Cadastro Gym Club</h1>
             </div>
             <div class="register">
                     <input type="text" name="name" placeholder="Nome Completo">
@@ -69,11 +69,11 @@
 
                 </div>
             </div>
-
+            </form>
         </aside>
 
-        </form>
-    
+        
+</div> 
 
 </body>
 

@@ -4,6 +4,8 @@
 global $conn;
 require "connection.php";
 
+session_start();
+
 $user = filter_input_array(INPUT_POST);
 
 
@@ -22,6 +24,8 @@ $stmt = $conn->prepare($query);
 $stmt->bindParam("textarea", $user["textarea"]);
 $stmt->bindParam("grade",$user["grade"]);
 $stmt->execute();
+
+
 
 $response = [
     "type" => "success",

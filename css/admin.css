@@ -137,13 +137,12 @@ input[type="submit"] {
 
 }
 
-.divNewAdmin{
+.divAdmin{
 padding: 10px;
 margin-top: 2%;
 
-
 }
-#formRegister{
+.formsAdmin{
     margin-top: 5%;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
@@ -151,17 +150,25 @@ margin-top: 2%;
     border-radius: 10px;
     width: calc(40% + 10px);
 }
-#btnAdmin{
+
+.divAdmin i{
     padding: 7px;
     margin-bottom: 10px;
+    font-size: 30px;
     width: auto;
-    font-size: 15px;
-    background-image: linear-gradient(to right, #0f12c0 0%, #0a1a75 0%);
-    border: solid 3px transparent;
-    color: white;
+    background-color: white;
     border-radius: 10px;
 }
-
+.divAdmin button{
+background: transparent;
+border: none;
+margin-left: 2%;
+cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+}
 
 
 

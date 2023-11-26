@@ -77,12 +77,49 @@ fetch(urlUser).then((response) => {
 
 
 
-let searchProducts = document.querySelector("#pesquisar");
+const searchProducts = document.querySelector("#pesquisar");
+const container = document.querySelector(".container");
 
 searchProducts.addEventListener("input", () => {
-  searchTerm = searchProducts.value;
-  const url = "api/search-products.php?name=${searchTerm}";
+  const searchTerm = searchProducts.value.trim();
 
+  if (searchTerm === "") {
+    clearContainer();
+  } else {
+    searchProductsByName(searchTerm);
+  }
+});
 
-})
+function searchProductsByName(name) {
+  const url = `api/search-products.php?name=${encodeURIComponent(name)}`;
+
+  fetch(url).then((response) => response.json())
+    .then((matchingProducts) => {
+      clearContainer();
+      matchingProducts.forEach((product) => {
+        appendProductToContainer(product);
+      });
+    })
+    .catch((error) => {
+      console.error("Erro na solicitação:", error);
+    });
+}
+
+function clearContainer() {
+  container.innerHTML = "";
+}
+
+function appendProductToContainer(product) {
+  const productBox = document.createElement("div");
+  productBox.classList.add("product-box");
+
+  productBox.innerHTML = `
+    <img src="${product.url_product}">
+    <h3>${product.name_product}</h3>
+    <p>R$: ${product.price_product}</p>
+    <button class="add-to-cart-btn">Adicionar ao Carrinho</button>
+  `;
+
+  container.appendChild(productBox);
+}
 

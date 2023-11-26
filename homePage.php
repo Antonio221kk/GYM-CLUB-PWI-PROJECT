@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/homePage.css">
   <script type="text/javascript" src="js/homePage.js" async></script>
+  <script type="text/javascript" src="js/cart-shopping.js" async></script>
   <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="icon" href="css/favIconHouse.svg">
@@ -20,7 +21,7 @@
     <div class="frase">
       <h1 class="frase-h1">Qual sua meta?</h1>
     </div>
-    <div class="cart-shopping">
+    <div class="cart-shopping" onclick="openCart()">
     <i class="fa-solid fa-cart-shopping" style="color: #ffffff;" ></i></i>
     </div>
     <div class="account"><i class="fa-regular fa-circle-user" id="openModalBtn" style="color: #ffffff;" ></i>
@@ -34,6 +35,22 @@
           <!--Conteudo que está no JS  -->
       </div>
   </div>
+  <!-- Shopping car -->
+  <div class="cart-container">
+  <div class="cart">
+    <div class="cart-header">
+      <h2>Carrinho</h2>
+      <span class="close-cart" onclick="closeCart()">&times;</span>
+    </div>
+    <div class="cart-content">
+      <!-- Conteúdo do carrinho vai aqui -->
+    </div>
+    <div class="cart-buttons">
+      <button onclick="finishPurchase()">Finalizar Compra</button>
+    </div>
+  </div>
+</div>
+
   <section class="org">
 
     <div class="box">

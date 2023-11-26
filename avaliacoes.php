@@ -24,6 +24,9 @@
 
             <h2>Nota de 0 a 10</h2>
             <input type="number" name="grade" id="grade" class="grade" min="0" max="10" placeholder="1 a 10">
+
+                <div class="message"></div>
+
             <input type="submit" class="btnEnviar">
         </form>
     </section>
