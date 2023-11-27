@@ -46,9 +46,11 @@ fetch(urlUser).then((response) => {
     <span class="close" id="closeModalBtn">&times;</span>
           <div class="profile-tab">
           <h2>Usuário Gym Club</h2>
-              <img src="css/imagens/ramon.jpg" alt="Imagem do Perfil" id="imgUser">
-              <label for="file" class="file-input-button">Escolha sua foto</label>
-              <input type="file" id="file" class="file-input">
+          <img src="" alt="Imagem do Perfil" id="imgUser">
+            <form class="formUpload">
+              <input type="file" id="changephoto" class="file-input" name="foto">
+              <input type="submit" value="Atualizar foto" class="btnPhoto">
+            </form>
               <p><strong>Nome:</strong> ${user.name}</p>
               <p><strong>Email:</strong> ${user.email}</p>
               <button id="logout">Logout</button>
@@ -70,6 +72,32 @@ fetch(urlUser).then((response) => {
         window.location.href = 'login.php';
       });
     });
+
+    const formUpload = document.querySelector(".formUpload");
+    formUpload.addEventListener('submit', (e) => {
+    
+      e.preventDefault();
+            
+      const url = "api/upload.php";
+      const options = {
+        method: "POST",
+        body: new FormData(formUpload)
+      }
+      fetch(url,options).then((response)=>{
+          response.json().then((data)=>{
+            if(data.type === "success"){
+              let imgElement = document.querySelector("#imgUser");
+
+              imgElement.src = `imageUsers/${data.photo}`;
+              
+             }
+          })
+      })
+    
+       
+       
+    });
+
   })
 })
 
@@ -122,4 +150,6 @@ function appendProductToContainer(product) {
 
   container.appendChild(productBox);
 }
+
+// UPLOAD FOTO
 

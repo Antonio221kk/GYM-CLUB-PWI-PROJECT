@@ -325,6 +325,118 @@ formAdmin.addEventListener("submit", (event) => {
 
                         });
 
+                        //---------------------------table products------------------------------//
+                        document.querySelector("#product-table").innerHTML = `
+                        <div class="container">
+            <div class="user-list">
+        <h1>Lista de Produtos</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>ID </th>
+                <th>Nome</th>
+                <th>Valor</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+
+                        `
+                        const getProducts = "api/table-products.php";
+
+                        fetch(getProducts)
+                            .then((response) => {
+                                response.json().then((productData) => {
+                                    productData.forEach((event) => {
+                                        document.querySelector("tbody").innerHTML += `<tr>
+                                    <td>${event.id_product}</td>
+                                    <td>${event.name_product}</td>
+                                    <td> R$ ${event.price_product}</td>
+                                    
+                                    </tr>`;
+                                    });
+                                });
+                            });
+
+                        //---------------------------table users------------------------------//
+                        document.querySelector("#user-table").innerHTML = `
+                        <div class="container">
+            <div class="user-list">
+        <h1>Lista de Usuários</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>ID </th>
+                <th>Nome</th>
+                <th>Email</th>
+                
+            </tr>
+            </thead>
+            <tbody class="tbody1">
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+
+                        `
+                        const getUsers = "api/table-users.php";
+                            
+                        fetch(getUsers)
+                            .then((response) => {
+                                response.json().then((userData) => {
+                                    userData.forEach((event) => {
+                                        document.querySelector(".tbody1").innerHTML += `<tr>
+                                    <td>${event.id}</td>
+                                    <td>${event.name}</td>
+                                    <td>${event.email}</td>
+                                    
+                                    </tr>`;
+                                    });
+                                });
+                            });
+
+                            //---------------------------table admin------------------------------//
+                        document.querySelector("#admin-table").innerHTML = `
+                        <div class="container">
+            <div class="user-list">
+        <h1>Lista de Admins</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>ID </th>
+                <th>Email</th>
+                
+            </tr>
+            </thead>
+            <tbody class="tbody2">
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+
+                        `
+                        const getAdmin = "api/table-admin.php";
+                            
+                        fetch(getAdmin)
+                            .then((response) => {
+                                response.json().then((adminData) => {
+                                    adminData.forEach((event) => {
+                                        document.querySelector(".tbody2").innerHTML += `<tr>
+                                    <td>${event.id_admin}</td>
+                                    <td>${event.email_admin}</td>
+                                    
+                                    </tr>`;
+                                    });
+                                });
+                            });
+
 
                     } else {
                         updateMessage();

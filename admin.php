@@ -33,6 +33,15 @@
     <!-- conteudo do JS -->
 
     </section>
+
+    <section id="product-table">
+    </section>
+
+    <section id="user-table">
+    </section>
+
+    <section id="admin-table">
+    </section>
     
 
 </body>
