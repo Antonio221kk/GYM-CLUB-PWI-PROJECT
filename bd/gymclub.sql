@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Tempo de geração: 24-Nov-2023 às 11:08
--- Versão do servidor: 8.0.21
--- versão do PHP: 7.3.21
+-- Host: 127.0.0.1
+-- Generation Time: Nov 29, 2023 at 12:26 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,107 +18,164 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `gymclub`
+-- Database: `gymclub`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `admin`
+-- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE IF NOT EXISTS `admin` (
-  `id_admin` int NOT NULL AUTO_INCREMENT,
-  `email_admin` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `password_admin` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id_admin`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `admin` (
+  `id_admin` int(11) NOT NULL,
+  `email_admin` varchar(255) NOT NULL,
+  `password_admin` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id_admin`, `email_admin`, `password_admin`) VALUES
-(6, 'jhonatan@gmail.com', '$2y$10$kWIMKzaJ02s0Len5at3cZ.vDg1RhAFjgJo0z9s/i1vCnjF3b.WH3u'),
 (7, 'antonio@gmail.com', '$2y$10$l.ktTpnm9bmpqDw9aFLl0O7YJEqpzhxZq9K1xVF3f6n6oGlBIriMy');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `coments`
+-- Table structure for table `coments`
 --
 
-DROP TABLE IF EXISTS `coments`;
-CREATE TABLE IF NOT EXISTS `coments` (
-  `id_coment` int NOT NULL AUTO_INCREMENT,
-  `coment` varchar(350) COLLATE utf8mb4_general_ci NOT NULL,
-  `grade` int NOT NULL,
-  PRIMARY KEY (`id_coment`)
+CREATE TABLE `coments` (
+  `id_coment` int(11) NOT NULL,
+  `users_id` int(11) NOT NULL,
+  `coment` varchar(355) NOT NULL,
+  `grade` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `coments`
+--
+
+INSERT INTO `coments` (`id_coment`, `users_id`, `coment`, `grade`) VALUES
+(18, 1, ' Gym Club é um site excepcional que oferece uma experiência fitness completa. Sua interface intuitiva e design moderno facilitam a navegação. A variedade de programas de treino e recursos educacionais é impressionante, proporcionando aos usuários um caminho claro para atingir seus objetivos de condicionamento físico. Com informações atualizadas e s', 10);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `products`
+-- Table structure for table `products`
 --
 
-DROP TABLE IF EXISTS `products`;
-CREATE TABLE IF NOT EXISTS `products` (
-  `id_product` int NOT NULL AUTO_INCREMENT,
-  `name_product` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+CREATE TABLE `products` (
+  `id_product` int(11) NOT NULL,
+  `name_product` varchar(255) NOT NULL,
   `price_product` float NOT NULL,
-  `url_product` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `url_product` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id_product`, `name_product`, `price_product`, `url_product`) VALUES
 (7, 'Whey Protein', 150, 'https://lojamaxtitanium.vtexassets.com/arquivos/ids/157626-800-800?v=638351464193770000&width=800&height=800&aspect=true'),
 (8, 'Creatina', 90, 'https://lojamaxtitanium.vtexassets.com/assets/vtex.file-manager-graphql/images/6a503649-cd9f-40e4-b26e-f37071665e67___e7546e8ec27e96e1b68dfbf5017dd0b5.png'),
 (9, 'Tech T-Shirt Insider', 159, 'https://www.insiderstore.com.br/cdn/shop/files/C6-TechT-ShirtGolaUPreto6.jpg?v=1700691687&width=1206'),
-(10, 'Pasta Bueníssimo ', 64, 'https://images.tcdn.com.br/img/img_prod/1087751/pasta_de_amendoim_sabor_buenissimo_com_whey_protein_600g_117_1_a7a671e2ea505bc2ebbb4d619630e8bd.png'),
-(12, '100% Whey Dr. Peanut 900g - Max Titanium Avelã', 189, 'https://images.tcdn.com.br/img/img_prod/1087751/100_whey_dr_peanut_900g_max_titanium_avela_362_1_fe3bf200d64390b5064eec67be19f370.jpg');
+(12, '100% Whey Dr. Peanut 900g - Max Titanium Avelã', 189, 'https://images.tcdn.com.br/img/img_prod/1087751/100_whey_dr_peanut_900g_max_titanium_avela_362_1_fe3bf200d64390b5064eec67be19f370.jpg'),
+(13, 'Horus 150g - Amora', 86, 'https://lojamaxtitanium.vtexassets.com/arquivos/ids/157430-800-800?v=638344614816970000&width=800&height=800&aspect=true'),
+(14, 'Power Protein Bar 90G -Dark chocolate truffle', 125, 'https://static.netshoes.com.br/produtos/power-protein-bar-8-unidades-max-titanium-(dark-chocolate-truffle)/48/A05-1259-448/A05-1259-448_zoom1.jpg?ts=1685461135&'),
+(16, 'Wingsuit - Insider', 300, 'https://www.insiderstore.com.br/cdn/shop/files/OFF-WHITE-01_3c1c448d-4df1-4749-ba9d-bd7c3276fb98.jpg?v=1699739406&width=1206'),
+(18, 'BOLD BOMBOM CROCANTE (12 unid.)', 169, 'https://static.netshoes.com.br/produtos/bold-bombom-crocante-(caixa-12-unid)/04/7GW-0008-004/7GW-0008-004_zoom1.jpg?ts=1690216379&');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(225) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `planId` float NOT NULL,
-  `fk_coments` int DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_coments` (`fk_coments`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `image` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `planId`, `fk_coments`) VALUES
-(13, 'Antônio', 'canalantoniomartins@gmail.com', '$2y$10$L9QWKx6NoeuAFQ7QUwAOpORwFNIBupvFqhJ1T8zQTI6koNzUSyVVS', 20, NULL),
-(14, 'antonio', 'elias@gmail.com', '$2y$10$UweLwknr8hIexAgxyY7v2uYGFuxU0QKvnnR1T66qOCjlPIpzk1bP2', 20, NULL),
-(15, 'antonio', 'antonio@gmail.com', '$2y$10$haqZfz5l2c3Y8JnhJkOC9.0rrV1pwzrZkt/ngW9uu7v3m8kE.acMG', 20, NULL);
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `planId`, `image`) VALUES
+(1, 'antonio', 'antonio@gmail.com', '$2y$10$vEpeu9F7Ik8JZU187jinMOGpEhe8OSysVr3SCP42a6FP1UvLa8jTa', 80, '302e57804b35dadb4f16efe7ac71cc5e.png'),
+(2, 'elias', 'elias@gmail.com', '$2y$10$3/l/tYRDOqIHtFLsaHgL2OuOrBfKb.jphaJJAhcWOHnG/p485gHC.', 80, 'fd938b53d8a9a43c10f35cb4e0f8cf57.jpg');
 
 --
--- Restrições para despejos de tabelas
+-- Indexes for dumped tables
 --
 
 --
--- Limitadores para a tabela `users`
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indexes for table `coments`
+--
+ALTER TABLE `coments`
+  ADD PRIMARY KEY (`id_coment`),
+  ADD KEY `users_id` (`users_id`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id_product`);
+
+--
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`fk_coments`) REFERENCES `coments` (`id_coment`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `coments`
+--
+ALTER TABLE `coments`
+  MODIFY `id_coment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `coments`
+--
+ALTER TABLE `coments`
+  ADD CONSTRAINT `coments_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

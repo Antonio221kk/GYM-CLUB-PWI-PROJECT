@@ -21,7 +21,7 @@ formAdmin.addEventListener("submit", (event) => {
                 let secondsLeft = 2; // Defina o número de segundos desejados
                 const messageAdmin = document.querySelector("#message-admin");
                 function updateMessage() {
-                    messageAdmin.innerHTML = admin + " Privilégios em " + secondsLeft + " segundos...";
+                    messageAdmin.innerHTML = admin.message + " Privilégios em " + secondsLeft + " segundos...";
                 }
                 const intervalId = setInterval(() => {
                     secondsLeft--;

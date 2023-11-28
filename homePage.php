@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/homePage.css">
   <script type="text/javascript" src="js/homePage.js" async></script>
-  <script type="text/javascript" src="js/cart-shopping.js" async></script>
   <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="icon" href="css/favIconHouse.svg">
@@ -22,34 +21,57 @@
       <h1 class="frase-h1">Qual sua meta?</h1>
     </div>
     <div class="cart-shopping" onclick="openCart()">
-    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;" ></i></i>
+      <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></i>
     </div>
-    <div class="account"><i class="fa-regular fa-circle-user" id="openModalBtn" style="color: #ffffff;" ></i>
+    <div class="account"><i class="fa-regular fa-circle-user" id="openModalBtn" style="color: #ffffff;"></i>
     </div>
-    <div class="nav-right">
-    <i class="fa-solid fa-bars" style="color: #ffffff;" ></i>
+    <div class="nav-right" onclick="openSideMenu()">
+      <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
     </div>
   </header>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-          <!--Conteudo que está no JS  -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <!--Conteudo que está no JS  -->
+    </div>
+  </div>
+
+  <div class="side-menu-container" id="sideMenuContainer">
+    <div class="side-menu">
+      <div class="side-menu-buttons">
+        <button onclick="finalizarMenu()" class="btnCloseNav"><i class="fa-solid fa-x" style="color: #000000;"></i></button>
       </div>
+      <div class="side-menu-header">
+        <h2>Menu Lateral</h2>
+      </div>
+      <div class="side-menu-content">
+        <div class="menu-header">
+            <ul>
+                <li><a href="avaliacoes.php">Avalie o site</a></li>
+                <li><a href="https://github.com/antonio221kk" target="_blank">GitHub</a></li>
+            </ul>
+      </div>
+      </div>
+
+    </div>
   </div>
   <!-- Shopping car -->
   <div class="cart-container">
-  <div class="cart">
-    <div class="cart-header">
-      <h2>Carrinho</h2>
-      <span class="close-cart" onclick="closeCart()">&times;</span>
-    </div>
-    <div class="cart-content">
-      <!-- Conteúdo do carrinho vai aqui -->
-    </div>
-    <div class="cart-buttons">
-      <button onclick="finishPurchase()">Finalizar Compra</button>
+    <div class="cart">
+      <div class="cart-header">
+        <h2>Carrinho</h2>
+        <span class="close-cart" onclick="closeCart()">&times;</span>
+      </div>
+      <div class="cart-content">
+        <!-- Conteúdo do carrinho vai aqui -->
+      </div>
+      <div class="cart-total">
+
+      </div>
+      <div class="cart-buttons">
+        <button onclick="finalizar()" class="finalizarCompra">Finalizar Compra</button>
+      </div>
     </div>
   </div>
-</div>
 
   <section class="org">
 
@@ -67,12 +89,12 @@
   </section>
 
   <section class="loja">
-  <div class="h1-loja">
-    <h1 >Loja Gym Club</h1>
-  </div>
-  <div class="search-products">
-    <input type="text" placeholder="Pesquisar produto..." name="pesquisarProdutos" id="pesquisar">
-  </div>
+    <div class="h1-loja">
+      <h1>Loja Gym Club</h1>
+    </div>
+    <div class="search-products">
+      <input type="text" placeholder="Pesquisar produto..." name="pesquisarProdutos" id="pesquisar">
+    </div>
     <div class="container">
 
     </div>

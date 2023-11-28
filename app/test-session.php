@@ -13,5 +13,6 @@ if (!isset($_SESSION["user"])) {
 echo json_encode([
     "type" => "success",
     "message" => "Usuário logado",
-    "user" => $_SESSION["user"]
+    "user" => $_SESSION["user"],
+    
 ]);

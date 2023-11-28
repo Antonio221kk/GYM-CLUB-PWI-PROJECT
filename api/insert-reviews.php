@@ -5,7 +5,7 @@ require "connection.php";
 
 session_start();
 
-
+// Verifica se há usuario na sessão
 if (!isset($_SESSION["user"])) {
     echo json_encode([
         "type" => "error",
@@ -28,20 +28,23 @@ if(in_array("", $user)) {
 } 
 
 
+
 $sql = "SELECT id FROM users WHERE email = :email";
 $stmt = $conn->prepare($sql);
-$stmt->bindParam(":email", $_SESSION["email"]);
+$stmt->bindParam(":email", $_SESSION["user"]["email"]);
 $stmt->execute();
-$idMoment = $stmt->fetchColumn();
+$idMoment = $stmt->fetch();
+
 
 
 
 $query = "INSERT INTO coments (id_coment, users_id, coment, grade) VALUES (NULL, :user, :textarea, :grade)";
 $stmt = $conn->prepare($query);
-$stmt->bindParam("user", $idMoment);
+$stmt->bindParam("user", $idMoment["id"]);
 $stmt->bindParam("textarea", $user["textarea"]);
 $stmt->bindParam("grade", $user["grade"]);
 $stmt->execute();
+
 
 
 $response = [

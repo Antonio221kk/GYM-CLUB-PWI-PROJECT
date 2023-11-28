@@ -79,8 +79,11 @@ header {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
   
+}
+.grade-form{
+    color: white;
 }
 .btnEnviar{
     font-size: 20px;
@@ -96,5 +99,31 @@ header {
     margin: 10px;
     border: double;
     border-color: white ;
+}
+.container{
+
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+
+}
+.review-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 25%;
+}
+
+.container h1, h2 {
+    color: black;
+}
+
+p {
+    margin: 10px 0;
+    color: black;
 }
 

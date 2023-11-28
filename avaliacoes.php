@@ -22,7 +22,7 @@
 
             <textarea type="textarea" name="textarea" id="textarea" cols="30" rows="10"  maxlength="350"></textarea>
 
-            <h2>Nota de 0 a 10</h2>
+            <h2 class="grade-form">Nota de 0 a 10</h2>
             <input type="number" name="grade" id="grade" class="grade" min="0" max="10" placeholder="1 a 10">
 
                 <div class="message"></div>
@@ -33,8 +33,9 @@
 
     <section id="sectionContent">
         <h1 class="h1-geral" id="h1Avaible">Algumas avaliações abaixo:</h1>
-
-
+        <div class="container">
+            <!--Informações do JS-->
+        </div>
     </section>
 
 </body>
