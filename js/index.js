@@ -28,7 +28,9 @@ function menuMobile(event){
 function transfer(){
     window.location.href = "login.php"
 }
-
+function btnNutri(){
+    window.location.href = "https://www.guiadenutricao.com.br/o-que-e-nutricao/"
+}
 
 function calcularIMC(){
     let peso = document.querySelector("#peso").value;

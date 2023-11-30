@@ -75,7 +75,7 @@
             <img src="css/imagens/prato.png">
         </div>
         <h3>Nutrição</h3>
-        <p>Saiba como se alimentar! Entre em contato com nossos nutricionistas!</p>
+        <p>Saiba como se alimentar! Acesse estas dicas sobre nutrição</p>
         <button class="btnNutri" onclick="btnNutri()"><i class="fa-solid fa-arrow-right"></i></button>
        </div>
     </div>

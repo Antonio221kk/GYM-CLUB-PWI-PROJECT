@@ -17,7 +17,7 @@
             <img src="css/imagens/logoIndex.png" alt="Gym Club">
         </div>
 
-        <button class="registrar" onclick="transfer()">Primeiro acesso</button>
+        <button class="registrar" onclick="transfer()"><i class="fa-regular fa-address-card" style="color: #ffffff;"></i></button>
     </header>
     <section>
         <div class="login">
