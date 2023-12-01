@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2023 at 12:26 AM
+-- Generation Time: Dec 01, 2023 at 02:28 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -84,8 +84,7 @@ INSERT INTO `products` (`id_product`, `name_product`, `price_product`, `url_prod
 (12, '100% Whey Dr. Peanut 900g - Max Titanium Avelã', 189, 'https://images.tcdn.com.br/img/img_prod/1087751/100_whey_dr_peanut_900g_max_titanium_avela_362_1_fe3bf200d64390b5064eec67be19f370.jpg'),
 (13, 'Horus 150g - Amora', 86, 'https://lojamaxtitanium.vtexassets.com/arquivos/ids/157430-800-800?v=638344614816970000&width=800&height=800&aspect=true'),
 (14, 'Power Protein Bar 90G -Dark chocolate truffle', 125, 'https://static.netshoes.com.br/produtos/power-protein-bar-8-unidades-max-titanium-(dark-chocolate-truffle)/48/A05-1259-448/A05-1259-448_zoom1.jpg?ts=1685461135&'),
-(16, 'Wingsuit - Insider', 300, 'https://www.insiderstore.com.br/cdn/shop/files/OFF-WHITE-01_3c1c448d-4df1-4749-ba9d-bd7c3276fb98.jpg?v=1699739406&width=1206'),
-(18, 'BOLD BOMBOM CROCANTE (12 unid.)', 169, 'https://static.netshoes.com.br/produtos/bold-bombom-crocante-(caixa-12-unid)/04/7GW-0008-004/7GW-0008-004_zoom1.jpg?ts=1690216379&');
+(16, 'Wingsuit - Insider', 300, 'https://www.insiderstore.com.br/cdn/shop/files/OFF-WHITE-01_3c1c448d-4df1-4749-ba9d-bd7c3276fb98.jpg?v=1699739406&width=1206');
 
 -- --------------------------------------------------------
 

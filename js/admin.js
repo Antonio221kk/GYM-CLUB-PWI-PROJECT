@@ -169,7 +169,7 @@ formAdmin.addEventListener("submit", (event) => {
                         document.querySelector("#btnDeletAdmin").addEventListener("click", () => {
                             const sectionAdmin = document.querySelector("#section-admin").innerHTML =
                                 `<form id="formDeleteAdmin" class="formsAdmin">
-                                <h1>Deletar Administradorr</h1>
+                                <h1>Deletar Administrador</h1>
                                 <label for="emailAdmin">Digite o email para deletar:</label>
         
                                 <input type="email" name="email_admin" placeholder="Email">

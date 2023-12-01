@@ -28,7 +28,7 @@
                 <label for="cpf">EMAIL:</label>
                 <input type="email" name="email" placeholder="EMAIL">
                 <label for="password">SENHA:</label>
-                <input type="password" name="password" class="password" id="password" placeholder="SENHA">
+                <input type="password" name="password" class="password" id="password" placeholder="SENHA" >
                 <!-- <a href="#"><p>Esqueci minha senha</p></a> -->
                 <div id="message"></div>
                 <input type="submit" value="Entrar">
