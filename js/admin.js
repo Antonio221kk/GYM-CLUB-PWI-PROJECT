@@ -83,10 +83,12 @@ formAdmin.addEventListener("submit", (event) => {
                                     response.json().then((result) => {
                                         if (result.type === "success") {
                                             document.querySelector("#message1").innerHTML = result.message
+                                            
                                         }
                                         else {
                                             document.querySelector("#message1").innerHTML = result.message
                                         }
+                                        
                                     });
                                 })
 

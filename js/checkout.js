@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
    
     produtosCarrinho.forEach(produto => {
       var colocam = document.createElement('div');
+      colocam.classList.add('cart-item');
       colocam.innerHTML = `
         <img src="${produto.url_product}">
         <h3>${produto.name_product}</h3>

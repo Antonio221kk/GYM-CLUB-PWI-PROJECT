@@ -66,91 +66,6 @@ header i{
 }
 /* Nav Bar */
 
-/* Usuario */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.7);
-    
-}
-
-.modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-    color: black;
-    border-radius: 10px;
-    
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.profile-tab {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-
-.profile-tab img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 10px;
-
-}
-.formUpload{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.profile-tab p {
-    margin: 5px;
-}
-#logout{
-    margin-top: 2%;
-    color: #fff;
-    background-color: #0f12c0;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    
-}
-.btnPhoto{
-    margin-top: 2%;
-    color: #fff;
-    background-color: #0f12c0;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* FIm do usuario */
 
 section {
     display: flex;
@@ -181,9 +96,7 @@ footer i {
 
 }
 
-.p-treino{
-    font-size: 20px ;
-}
+
 .box {
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
@@ -240,9 +153,8 @@ footer i {
 }
 .container{
     display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     
 }
 .h1-loja{
@@ -250,14 +162,15 @@ footer i {
 
 }
 .product-box {
+    max-width: 350px;
+    max-height: 350px;
     margin: 20px;
     padding: 10px;
-    border: 1px solid #ccc;
     text-align: center;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    max-width: 350px;
-    height: auto;
+    
+    
 }
 
 .product-box img {
@@ -266,7 +179,6 @@ footer i {
     margin-bottom: 10px;
     
 }
-
 .add-to-cart-btn {
     margin-top: 5%;
     padding: 10px 20px;
@@ -455,8 +367,8 @@ a {
 
     }
 
-    footer p {
-        font-size: 25px;
+    .p-footer {
+        font-size: 15px;
     }
 
     .btnShowers {
@@ -527,7 +439,7 @@ a {
         width: 80%;
     }
 
-    footer p {
+    .p-footer {
         font-size: 22px;
     }
 
@@ -539,170 +451,57 @@ a {
     dialog {
         width: 70%;
     }
+    .org{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .box-text{
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .search-products{
+        width: 60%;
+    }
 
 }
 
 @media (max-width:425px) {
-    .frase-h1 {
-        text-align: center;
+    header i{
+        cursor: pointer;
+        font-size: 30px;
+        margin: 10px;
     }
-
+    
     .logo-img {
-        width: 100%;
-
+        max-width: 350px;
+        max-height: 70px;
     }
-
-    .logo {
-        width: 40%;
+    
+    .frase {
+        display: none;
     }
-
-    .frase-h1 {
-        font-size: 25px;
-
-    }
-
-    .btnCarrinho i {
-        font-size: 40px;
-    }
-
-    .img-sec {
-        max-width: 100%;
-        max-height: 40%;
-    }
-
-    .org-box {
-        display: inline-block;
-        width: 100%;
-        height: 400px;
-    }
-
-    .parag-box {
-
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .img-box {
-        width: 105%;
-
-    }
-
-    .box {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    .suple-box {
-        width: 200%;
-    }
-
-    .suplementos {
+    .search-products{
         width: 100%;
     }
-
-    dialog h4 {
-        margin-top: 10px;
-        font-size: 15px;
+    .p-treino{
+    font-size: 15px;
+    
     }
-
-    dialog {
-        width: 65%;
-    }
-
-    .closeMachines {
-        font-size: 15px;
-    }
-
-    dialog p {
-        font-size: 17px;
-    }
-
-    dialog h1 {
-        font-size: 18px;
-    }
-
-    .content-suple h1 {
-        font-size: 15px;
-    }
-
-    .content-suple h3 {
-        font-size: 10px;
-    }
-
-
-}
-
-@media (max-width:375px) {
-    .org-box {
-        height: 35%;
-    }
-
-    .frase-h1 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    footer p {
-        font-size: 15px;
-    }
-
-    .content-suple h1 {
-        font-size: 12px;
-
-    }
-
-    .content-suple h3 {
-        font-size: 15px;
-
-    }
-
-    .content-suple {
-        height: 100px;
-    }
-
-
-}
-
-@media (max-width:320px) {
-
-    footer p {
-        font-size: 15px;
-    }
-
-    dialog h4 {
-        margin-top: 5px;
-        font-size: 15px;
-    }
-
-    dialog {
-        width: 65%;
-    }
-
-    .closeMachines {
-        font-size: 15px;
-    }
-
-    dialog p {
-        font-size: 13px;
-    }
-
-    dialog h1 {
-        font-size: 15px;
-    }
-
-    .content-suple h1 {
-        font-size: 10px;
-
-    }
-
-    .content-suple h3 {
-        font-size: 12px;
-
-    }
-
-    .content-suple {
-        height: 100px;
+    .box{
         width: 100%;
     }
-
+    .p-footer{
+        font-size: 15px;
+    }
+    footer h2{
+        font-size: 15px;
+    }
+    footer i{
+        font-size: 30px;
+    }
+    .logo-img{
+        max-width: 80%;
+    max-height: 70px;
+    }
 }

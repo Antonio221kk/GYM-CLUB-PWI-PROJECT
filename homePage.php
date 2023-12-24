@@ -23,17 +23,12 @@
     <div class="cart-shopping" onclick="openCart()">
       <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></i>
     </div>
-    <div class="account"><i class="fa-regular fa-circle-user" id="openModalBtn" style="color: #ffffff;"></i>
+    <div class="account"><i class="fa-regular fa-circle-user"style="color: #ffffff;" onclick="openAccount()"></i>
     </div>
     <div class="nav-right" onclick="openSideMenu()">
       <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
     </div>
   </header>
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <!--Conteudo que está no JS  -->
-    </div>
-  </div>
 
   <div class="side-menu-container" id="sideMenuContainer">
     <div class="side-menu">
@@ -104,7 +99,7 @@
 
     <h2>Redes profissionais</h2>
     <a href="https://github.com/Antonio221kk" target="_blank"><i class="fa-brands fa-github" style="color: white;"></i></a> <a href="https://www.linkedin.com/in/antoniomsouza2/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #1226bf;"></i></a>
-    <p>Os desenvolvedores agradecem sua visita ao site!</p>
+    <p class="p-footer">Obrigado por nos visitar! Antônio M. Souza - 2023</p>
   </footer>
 </body>
 </body>

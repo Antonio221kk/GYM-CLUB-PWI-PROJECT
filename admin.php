@@ -35,12 +35,21 @@
     </section>
 
     <section id="product-table">
+
+    <!-- conteudo do JS -->
+
     </section>
 
     <section id="user-table">
+
+    <!-- conteudo do JS -->
+    
     </section>
 
     <section id="admin-table">
+
+    <!-- conteudo do JS -->
+
     </section>
     
 
