@@ -41,7 +41,7 @@
       <div class="side-menu-content">
         <div class="menu-header">
             <ul>
-                <li><a href="avaliacoes.php">Avalie o site</a></li>
+                <li><a href="review.php">Avalie o site</a></li>
                 <li><a href="https://github.com/antonio221kk" target="_blank">GitHub</a></li>
             </ul>
       </div>

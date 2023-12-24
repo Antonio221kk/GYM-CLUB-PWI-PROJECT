@@ -9,7 +9,7 @@
 body{
     background-color: #0C2340;
     color: white;
-    height: 2000px;
+    
 }
 ::-webkit-scrollbar{
     background-color: rgba(0, 0, 0, 0.8);
@@ -106,6 +106,7 @@ display: flex;
 justify-content: space-around;
 flex-wrap: wrap;
 
+
 }
 .review-box {
     background-color: rgba(0, 0, 0, 0.5);
@@ -115,7 +116,7 @@ flex-wrap: wrap;
     margin: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    width: 25%;
+    width: 30%;
 }
 
 .container h1, h2 {
@@ -127,3 +128,30 @@ p {
     color: black;
 }
 
+/* Media Query */
+
+@media (max-width:768px){
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .review-box {
+        width: 100%;
+        box-sizing: border-box; 
+    }
+    
+    .container h1, .container h2 {
+        color: black;
+        text-align: center;
+    }
+    
+    p {
+        margin: 10px 0;
+        color: black;
+        text-align: justify; 
+    }
+    
+}
